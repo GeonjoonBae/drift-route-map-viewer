@@ -1,0 +1,215 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.6041226526325,
+          23.582538577357386
+        ]
+      },
+      "properties": {
+        "NM_KOR": "표착지",
+        "TYPE": 1,
+        "TYPE_NAME": "표착지",
+        "NOTE": "1796년 10월 14일경",
+        "SEQ": 1,
+        "_layer_id": "route_points",
+        "_layer_title": "주요 지점",
+        "_source_file": "leespath_proved_PointLayer.shp",
+        "_source_crs": "EPSG:3857"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.60062400770222,
+          23.570971043169955
+        ]
+      },
+      "properties": {
+        "NM_KOR": "동위 체류",
+        "TYPE": 2,
+        "TYPE_NAME": "체류지",
+        "NOTE": "체류 기간: 6~7일",
+        "SEQ": 2,
+        "_layer_id": "route_points",
+        "_layer_title": "주요 지점",
+        "_source_file": "leespath_proved_PointLayer.shp",
+        "_source_crs": "EPSG:3857"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.58030537041327,
+          23.569590701647353
+        ]
+      },
+      "properties": {
+        "NM_KOR": "마궁 체류",
+        "TYPE": 2,
+        "TYPE_NAME": "체류지",
+        "NOTE": "체류 기간: 10일",
+        "SEQ": 3,
+        "_layer_id": "route_points",
+        "_layer_title": "주요 지점",
+        "_source_file": "leespath_proved_PointLayer.shp",
+        "_source_crs": "EPSG:3857"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.57682844489831,
+          23.571029098491927
+        ]
+      },
+      "properties": {
+        "NM_KOR": "협진아문 체류",
+        "TYPE": 2,
+        "TYPE_NAME": "체류지",
+        "NOTE": "체류 기간: 약 한 달",
+        "SEQ": 4,
+        "_layer_id": "route_points",
+        "_layer_title": "주요 지점",
+        "_source_file": "leespath_proved_PointLayer.shp",
+        "_source_crs": "EPSG:3857"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.21731246412865,
+          23.001095268887372
+        ]
+      },
+      "properties": {
+        "NM_KOR": "대만부 체류",
+        "TYPE": 2,
+        "TYPE_NAME": "체류지",
+        "NOTE": "1796년 12월 10일 관리 접견",
+        "SEQ": 5,
+        "_layer_id": "route_points",
+        "_layer_title": "주요 지점",
+        "_source_file": "leespath_proved_PointLayer.shp",
+        "_source_crs": "EPSG:3857"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.15292364737924,
+          24.74342372822182
+        ]
+      },
+      "properties": {
+        "NM_KOR": "동안현 체류",
+        "TYPE": 2,
+        "TYPE_NAME": "체류지",
+        "NOTE": "1797년 1월 4일 동안현 도착",
+        "SEQ": 6,
+        "_layer_id": "route_points",
+        "_layer_title": "주요 지점",
+        "_source_file": "leespath_proved_PointLayer.shp",
+        "_source_crs": "EPSG:3857"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.29701723534811,
+          26.084519687581203
+        ]
+      },
+      "properties": {
+        "NM_KOR": "복건성 내 체류",
+        "TYPE": 2,
+        "TYPE_NAME": "체류지",
+        "NOTE": "체류 기간: 두 달 6일 (1797년 1월 5일부터 3월 11일 또는 12일까지)",
+        "SEQ": 7,
+        "_layer_id": "route_points",
+        "_layer_title": "주요 지점",
+        "_source_file": "leespath_proved_PointLayer.shp",
+        "_source_crs": "EPSG:3857"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.13536779041797,
+          30.306851835021465
+        ]
+      },
+      "properties": {
+        "NM_KOR": "동정호 방문 제안",
+        "TYPE": 1,
+        "TYPE_NAME": "분기",
+        "NOTE": "『표해록』과 『서이방익사』에 따르면 \"북관 대선사에서 영거관이 악양루를 들를 것을 제안(남호현, 2021a, 121~122쪽)",
+        "SEQ": 9,
+        "_layer_id": "route_points",
+        "_layer_title": "주요 지점",
+        "_source_file": "leespath_proved_PointLayer.shp",
+        "_source_crs": "EPSG:3857"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.4379304975376,
+          32.790210954933464
+        ]
+      },
+      "properties": {
+        "NM_KOR": "하선",
+        "TYPE": 1,
+        "TYPE_NAME": "분기",
+        "NOTE": "범람으로 인해 운하를 사용할 수 없어 배에서 내려 육로로 이동하기 시작",
+        "SEQ": 10,
+        "_layer_id": "route_points",
+        "_layer_title": "주요 지점",
+        "_source_file": "leespath_proved_PointLayer.shp",
+        "_source_crs": "EPSG:3857"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.32171126119137,
+          26.07361372075607
+        ]
+      },
+      "properties": {
+        "NM_KOR": "표류민 신분 확정",
+        "TYPE": 1,
+        "TYPE_NAME": "분기",
+        "NOTE": "이방익 일행의 신분이 표류민으로 확정됨",
+        "SEQ": 8,
+        "_layer_id": "route_points",
+        "_layer_title": "주요 지점",
+        "_source_file": "leespath_proved_PointLayer.shp",
+        "_source_crs": "EPSG:3857"
+      }
+    }
+  ]
+}

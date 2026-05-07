@@ -1,0 +1,258 @@
+{
+  "title": "표해노정 웹지도",
+  "dataset": "Yi Bang-ik Drift",
+  "source_repo": "https://github.com/GeonjoonBae/Yi-Bangik-Drift",
+  "generated_from": "source_data/Yi-Bangik-Drift",
+  "default_center": [
+    31.8,
+    119.0
+  ],
+  "default_zoom": 5,
+  "basemaps": [
+    {
+      "id": "chgis_dem_hillshade",
+      "title": "CHGIS DEM + Hillshade",
+      "type": "tile",
+      "url": "assets/tiles/chgis_dem_hillshade/{z}/{x}/{y}.png",
+      "default": true,
+      "min_zoom": 3,
+      "max_zoom": 10,
+      "attribution": "CHGIS V5 DEM, based on GTOPO-30."
+    },
+    {
+      "id": "osm",
+      "title": "OpenStreetMap",
+      "type": "tile",
+      "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "default": false,
+      "max_zoom": 18,
+      "attribution": "&copy; OpenStreetMap contributors"
+    }
+  ],
+  "layers": [
+    {
+      "source": "leespath_proved.shp",
+      "out": "route_lines.geojson",
+      "id": "route_lines",
+      "title": "노정 선",
+      "category": "route",
+      "default_visible": true,
+      "style": {
+        "color": "#b91c1c",
+        "weight": 4,
+        "opacity": 0.92
+      },
+      "path": "data/geojson/route_lines.geojson",
+      "feature_count": 57
+    },
+    {
+      "source": "leespath_proved_PointLayer.shp",
+      "out": "route_points.geojson",
+      "id": "route_points",
+      "title": "주요 지점",
+      "category": "route",
+      "default_visible": true,
+      "style": {
+        "color": "#dc2626",
+        "radius": 7
+      },
+      "path": "data/geojson/route_points.geojson",
+      "feature_count": 10
+    },
+    {
+      "source": "Canal_LineLayer.shp",
+      "out": "canal_lines.geojson",
+      "id": "canal_lines",
+      "title": "운하",
+      "category": "context",
+      "default_visible": true,
+      "style": {
+        "color": "#0284c7",
+        "weight": 3,
+        "opacity": 0.78
+      },
+      "path": "data/geojson/canal_lines.geojson",
+      "feature_count": 3
+    },
+    {
+      "source": "AD_JA_PointLayer.csv",
+      "out": "ad_ja_points.geojson",
+      "id": "ad_ja_points",
+      "title": "행정 지명",
+      "category": "place",
+      "default_visible": true,
+      "style": {
+        "color": "#2563eb",
+        "radius": 5
+      },
+      "path": "data/geojson/ad_ja_points.geojson",
+      "feature_count": 71,
+      "skipped_rows": 6
+    },
+    {
+      "source": "HG_PointLayer.csv",
+      "out": "hg_points.geojson",
+      "id": "hg_points",
+      "title": "인문 지명",
+      "category": "place",
+      "default_visible": true,
+      "style": {
+        "color": "#7c3aed",
+        "radius": 5
+      },
+      "path": "data/geojson/hg_points.geojson",
+      "feature_count": 9,
+      "skipped_rows": 1
+    },
+    {
+      "source": "TG_PointLayer.csv",
+      "out": "tg_points.geojson",
+      "id": "tg_points",
+      "title": "교통 지명",
+      "category": "place",
+      "default_visible": true,
+      "style": {
+        "color": "#f97316",
+        "radius": 5
+      },
+      "path": "data/geojson/tg_points.geojson",
+      "feature_count": 14,
+      "skipped_rows": 5
+    },
+    {
+      "source": "MG_PointLayer.csv",
+      "out": "mg_points.geojson",
+      "id": "mg_points",
+      "title": "산계 지명",
+      "category": "place",
+      "default_visible": true,
+      "style": {
+        "color": "#16a34a",
+        "radius": 5
+      },
+      "path": "data/geojson/mg_points.geojson",
+      "feature_count": 3,
+      "skipped_rows": 1
+    },
+    {
+      "source": "WG_PointLayer.csv",
+      "out": "wg_points.geojson",
+      "id": "wg_points",
+      "title": "수계 지명",
+      "category": "place",
+      "default_visible": true,
+      "style": {
+        "color": "#0891b2",
+        "radius": 5
+      },
+      "path": "data/geojson/wg_points.geojson",
+      "feature_count": 5,
+      "skipped_rows": 1
+    },
+    {
+      "source": "v6_time_cnty_pts_gbk.dbf",
+      "out": "county_points.geojson",
+      "id": "county_points",
+      "title": "시계열 현급 행정 지점",
+      "category": "context",
+      "default_visible": false,
+      "style": {
+        "color": "#64748b",
+        "radius": 3
+      },
+      "path": "data/geojson/county_points.geojson",
+      "feature_count": 1695,
+      "skipped_rows": 5
+    }
+  ],
+  "scenes": [
+    {
+      "id": "overview",
+      "title": "전체 노정",
+      "description": "이방익 표해노정과 주요 지명 레이어를 함께 표시합니다.",
+      "visible_layers": [
+        "route_lines",
+        "route_points",
+        "ad_ja_points",
+        "hg_points",
+        "tg_points",
+        "mg_points",
+        "wg_points",
+        "canal_lines"
+      ]
+    },
+    {
+      "id": "route",
+      "title": "노정만 보기",
+      "description": "복원된 이동 선분과 주요 지점만 표시합니다.",
+      "visible_layers": [
+        "route_lines",
+        "route_points"
+      ]
+    },
+    {
+      "id": "transport",
+      "title": "교통망 비교",
+      "description": "노정, 교통 지명, 운하를 함께 표시합니다.",
+      "visible_layers": [
+        "route_lines",
+        "route_points",
+        "tg_points",
+        "canal_lines"
+      ]
+    },
+    {
+      "id": "place_context",
+      "title": "지명 맥락",
+      "description": "행정, 인문, 산계, 수계, 교통 지명을 함께 표시합니다.",
+      "visible_layers": [
+        "ad_ja_points",
+        "hg_points",
+        "tg_points",
+        "mg_points",
+        "wg_points"
+      ]
+    },
+    {
+      "id": "admin_context",
+      "title": "행정 지점 검토",
+      "description": "시계열 현급 행정 지점을 포함해 지명 위치를 검토합니다.",
+      "visible_layers": [
+        "route_lines",
+        "route_points",
+        "ad_ja_points",
+        "county_points"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "title": "노정기본도(1900K)",
+      "path": "assets/images/노정기본도(1900K).jpg"
+    },
+    {
+      "title": "노정기본도(1900K)_2",
+      "path": "assets/images/노정기본도(1900K)_2.jpg"
+    },
+    {
+      "title": "노정기본도(1900K)_3",
+      "path": "assets/images/노정기본도(1900K)_3.jpg"
+    },
+    {
+      "title": "노정기본도(1900K)_4",
+      "path": "assets/images/노정기본도(1900K)_4.jpg"
+    },
+    {
+      "title": "노정기본도(1900K)_5",
+      "path": "assets/images/노정기본도(1900K)_5.jpg"
+    },
+    {
+      "title": "명대역참고 비교",
+      "path": "assets/images/명대역참고 비교.jpg"
+    },
+    {
+      "title": "명대역참고 비교_2",
+      "path": "assets/images/명대역참고 비교_2.jpg"
+    }
+  ]
+}

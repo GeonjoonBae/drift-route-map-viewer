@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drift Route Map Viewer</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar" aria-label="지도 제어">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Historical GIS</p>
+          <h1 id="app-title">Drift Route Map Viewer</h1>
+        </div>
+        <div class="header-actions">
+          <button id="language-toggle" class="lang-button" type="button" title="Language" aria-label="Language">English</button>
+          <button id="fit-visible" class="icon-button" type="button" title="현재 레이어 맞춤" aria-label="현재 레이어 맞춤">⌖</button>
+        </div>
+      </header>
+
+      <section class="control-section">
+        <h2 id="section-basemap">배경 지도</h2>
+        <div id="basemap-list" class="basemap-list"></div>
+      </section>
+
+      <section class="control-section">
+        <h2 id="section-scenes">장면</h2>
+        <div id="scene-list" class="scene-list"></div>
+      </section>
+
+      <section class="control-section">
+        <h2 id="section-search">검색</h2>
+        <input id="search-input" class="search-input" type="search" placeholder="지명, 한자명, 사료명" autocomplete="off">
+        <div id="search-results" class="search-results" aria-live="polite"></div>
+      </section>
+
+      <section class="control-section">
+        <h2 id="section-display">표시</h2>
+        <label class="range-control">
+          <span id="label-density-title">레이블 밀도</span>
+          <input id="label-density" type="range" min="0" max="5" step="1" value="3">
+          <span id="label-density-value">Standard</span>
+        </label>
+      </section>
+
+      <section class="control-section">
+        <h2 id="section-layers">레이어</h2>
+        <div id="layer-list" class="layer-list"></div>
+      </section>
+
+      <section class="control-section">
+        <h2 id="section-legend">범례</h2>
+        <div id="legend-list" class="legend-list"></div>
+      </section>
+
+      <section class="control-section image-section">
+        <h2 id="section-images">지도 이미지</h2>
+        <div id="image-list" class="image-list"></div>
+      </section>
+    </aside>
+
+    <section class="map-panel" aria-label="지도">
+      <div id="map"></div>
+      <div id="status-bar" class="status-bar">데이터 로딩 중</div>
+    </section>
+  </main>
+
+  <div id="image-viewer" class="image-viewer" hidden>
+    <button id="image-close" class="image-close" type="button" aria-label="이미지 닫기">×</button>
+    <img id="image-viewer-img" alt="">
+    <div id="image-viewer-title" class="image-viewer-title"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
