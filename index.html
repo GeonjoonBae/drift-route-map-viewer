@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Drift Route Map Viewer</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/app.css?v=20260724-2">
 </head>
 <body>
   <main class="app-shell">
@@ -63,6 +63,7 @@
     </aside>
 
     <section class="map-panel" aria-label="지도">
+      <button id="sidebar-toggle" class="sidebar-toggle" type="button" title="Hide panel" aria-label="Hide panel">☰</button>
       <div id="map"></div>
       <div id="status-bar" class="status-bar">데이터 로딩 중</div>
     </section>
@@ -75,6 +76,6 @@
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="js/app.js"></script>
+  <script src="js/app.js?v=20260724-5"></script>
 </body>
 </html>

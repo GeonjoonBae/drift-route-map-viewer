@@ -1,0 +1,300 @@
+translation_key,priority,scope,layer_id,source_file,feature_ids,field,target_field,original_ko,auto_en,review_en,needs_review,auto_method,occurrences,context_hanja,context_name,context_type
+value:0c006a14f3be,optional,layer_title,chgis_1796_prefecture_boundaries,chgis_1796_prefecture_boundaries.geojson,221257; 97830; 97831; 97832; 97833; 97834; 97835; 97865; 97909; 97945; 220004; 220008,_layer_title,layer_title_en,1796 부급 경계,1796 Prefecture Boundaries,1796 Prefecture Boundaries,no,exact_map,272,霍州,Huo Zhou,直隶州
+value:c2b657e7760c,optional,layer_title,chgis_1820_province_boundaries,chgis_1820_province_boundaries.geojson,25020; 25021; 25022; 25023; 25024; 25025; 25026; 25027; 25028; 25029; 25030; 25031,_layer_title,layer_title_en,1820 성 경계,1820 Province Boundaries,1820 Province Boundaries,no,exact_map,32,西藏,Xizang,
+value:5e47f98e9355,core,subtype,ad_ja_points,ad_ja_points.geojson,AD_JD_077,소분류,subtype_en,행정Lv0,Administrative Lv0 (Capital),Administrative Lv0 (Capital),no,exact_map,1,北京,북경,행정 지명(치소)
+value:8919ec8e702b,core,subtype,ad_ja_points,ad_ja_points.geojson,AD_JA_012,소분류,subtype_en,행정Lv1,Administrative Lv1 (Province),Administrative Lv1 (Province),no,exact_map,1,福建省,복건성,행정 지명(치소)
+value:cbd51ae2eece,core,subtype,ad_ja_points,ad_ja_points.geojson,AD_JA_004; AD_JA_007; AD_JA_009; AD_JA_016; AD_JA_020; AD_JA_023; AD_JA_027; AD_JA_029; AD_JA_031; AD_JA_033; AD_JA_036; AD_JA_039,소분류,subtype_en,행정Lv2,Administrative Lv2 (Prefecture),Administrative Lv2 (Prefecture),no,exact_map,21,臺灣府,대만부,행정 지명(치소)
+value:bf82aa7dd619,core,subtype,ad_ja_points,ad_ja_points.geojson,AD_JA_005; AD_JA_008; AD_JA_010; AD_JA_013; AD_JA_015; AD_JA_017; AD_JA_018; AD_JA_019; AD_JA_021; AD_JA_022; AD_JA_025; AD_JA_026,소분류,subtype_en,행정Lv3,Administrative Lv3 (County/Zhou),Administrative Lv3 (County/Zhou),no,exact_map,41,同安縣,동안현,행정 지명(치소)
+value:986ab97df14f,core,subtype,ad_ja_points,ad_ja_points.geojson,AD_JA_003,소분류,subtype_en,행정Lv3/군사시설,Administrative Lv3 / Military Facility,Administrative Lv3 / Military Facility,no,exact_map,1,協鎭衙門,협진아문,특수행정 지명
+value:b8153594a438,core,category,ad_ja_points,ad_ja_points.geojson,AD_JA_004; AD_JA_005; AD_JA_007; AD_JA_008; AD_JA_009; AD_JA_010; AD_JA_012; AD_JA_013; AD_JA_015; AD_JA_016; AD_JA_017; AD_JA_018,대분류,major_category_en,행정 지명(치소),Administrative Place (Seat),Administrative Place (Seat),no,exact_map,64,臺灣府,대만부,행정 지명(치소)
+value:8b1ff38fa1db,optional,layer_title,ad_ja_points,ad_ja_points.geojson,AD_JA_001; AD_JA_002; AD_JA_003; AD_JA_004; AD_JA_005; AD_JA_006; AD_JA_007; AD_JA_008; AD_JA_009; AD_JA_010; AD_JA_012; AD_JA_013,_layer_title,layer_title_en,행정 지명,Administrative Places,Administrative Places,no,exact_map,71,東衛,동위,특수행정 지명
+feature:14a897ecba37,core,note,route_points,route_points.geojson,1,NOTE,note_en,1796년 10월 14일경,"Around October 14, 1796","Around October 14, 1796",yes,exact_map,1,,표착지,표착지
+feature:235e7370f790,core,note,route_points,route_points.geojson,6,NOTE,note_en,1797년 1월 4일 동안현 도착,"Arrived at Tongan Xian on January 4, 1797","Arrived at Tongan Xian on January 4, 1797",yes,exact_map,1,,동안현 체류,체류지
+feature:d6ca616b28aa,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_051,현재 위치 기초 단위,present_locality_en,"양저우시_바오잉현","Baoying County, Yangzhou City","Baoying County, Yangzhou City",yes,reverse_geocode_osm_nominatim,1,寶應縣,보응현,행정 지명(치소)
+feature:fca0c2df7e1a,core,note,route_points,route_points.geojson,10,NOTE,note_en,범람으로 인해 운하를 사용할 수 없어 배에서 내려 육로로 이동하기 시작,"Because flooding made canal travel impossible, they disembarked and began traveling overland","Because flooding made canal travel impossible, they disembarked and began traveling overland",yes,exact_map,1,,하선,분기
+feature:daedeac7aad5,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_069,현재 위치 기초 단위,present_locality_en,창저우시_보터우시,"Botou City, Cangzhou City","Botou City, Cangzhou City",yes,reverse_geocode_osm_nominatim,1,交河縣,교하현,행정 지명(치소)
+value:5de4b9e9f893,core,type,route_points,route_points.geojson,9; 10; 8,TYPE_NAME,type_en,분기,Branch Point,Branch Point,no,exact_map,3,,동정호 방문 제안,분기
+value:2addead17c25,core,subtype,tg_points,tg_points.geojson,TS_001; TS_002,소분류,subtype_en,교량,Bridge,Bridge,no,exact_map,2,洛陽橋,낙양교,교통 지명
+value:7f08dbeabd44,core,subtype,hg_points,hg_points.geojson,HG_003; HG_006; HG_008; HG_009; HG_010,소분류,subtype_en,종교시설(사찰),Buddhist Temple,Buddhist Temple,no,exact_map,5,法海寺,법해사,인문 지명
+value:b23bf1852cfe,core,subtype,hg_points,hg_points.geojson,HG_001; HG_005; HG_007,소분류,subtype_en,건축물,Building,Building,no,exact_map,3,大北門(臺灣府),대북문(대만부),인문 지명
+feature:04a5b7dfef38,core,name,route_points,route_points.geojson,8,NM_KOR,name_en,표류민 신분 확정,"Castaway Status Confirmed","Castaway Status Confirmed",yes,exact_map,1,,표류민 신분 확정,분기
+feature:acba2017691f,context,present_locality,wg_points,wg_points.geojson,WS_001,현재 위치 기초 단위,present_locality_en,주장시_차이쌍구,"Chaisang District, Jiujiang City","Chaisang District, Jiujiang City",yes,reverse_geocode_osm_nominatim,1,八里江,팔리강,수계 지명
+feature:f1f3154aeae6,context,present_locality,tg_points,tg_points.geojson,TS_019,현재 위치 기초 단위,present_locality_en,지난시_창칭구,"Changqing District, Jinan City","Changqing District, Jinan City",yes,reverse_geocode_osm_nominatim,1,長城驛,장성역,교통 지명
+feature:a5ef4745a29d,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_009,현재 위치 기초 단위,present_locality_en,푸톈시_리청구,"Chengxiang District, Putian City","Chengxiang District, Putian City",yes,reverse_geocode_osm_nominatim,1,興化府,흥화부,행정 지명(치소)
+value:42f1f9d44e77,context,present_region,ad_ja_points,ad_ja_points.geojson,AD_JA_034; AD_JA_035; AD_JA_036; AD_JA_037; AD_JA_045; TS_013,현재 위치 광역 단위,present_region_en,중국_안후이성,China_Anhui Province,China_Anhui Province,yes,exact_map,6,蕪湖縣,무호현,행정 지명(치소)
+value:b5536bc29da4,context,present_region,ad_ja_points,ad_ja_points.geojson,AD_JD_076; AD_JD_077,현재 위치 광역 단위,present_region_en,중국_베이징시,China_Beijing Municipality,China_Beijing Municipality,yes,exact_map,2,良鄕縣,양향현,행정 지명(치소)
+value:96a10f751ca7,context,present_region,ad_ja_points,ad_ja_points.geojson,AD_JA_005; AD_JA_006; AD_JA_007; AD_JA_008; AD_JA_009; AD_JA_010; AD_JA_012; AD_JA_013; AD_JA_014; AD_JA_015; AD_JA_016; AD_JA_017,현재 위치 광역 단위,present_region_en,중국_푸젠성,China_Fujian Province,China_Fujian Province,yes,exact_map,23,同安縣,동안현,행정 지명(치소)
+value:c8859db49eed,context,present_region,ad_ja_points,ad_ja_points.geojson,AD_JA_043; WS_002,현재 위치 광역 단위,present_region_en,중국_후난성,China_Hunan Province,China_Hunan Province,yes,exact_map,2,岳州府,악주부,행정 지명(치소)
+value:84c6f6172392,context,present_region,ad_ja_points,ad_ja_points.geojson,AD_JA_030; AD_JA_031; AD_JA_032; AD_JA_033; AD_JA_046; AD_JD_048; AD_JD_050; AD_JD_051; AD_JD_052; AD_JD_053; AD_JD_055; AD_JD_056,현재 위치 광역 단위,present_region_en,중국_장쑤성,China_Jiangsu Province,China_Jiangsu Province,yes,exact_map,19,無錫縣,무석현,행정 지명(치소)
+value:1edab196d6e4,context,present_region,ad_ja_points,ad_ja_points.geojson,AD_JA_038; AD_JA_039; AD_JA_044; WS_001,현재 위치 광역 단위,present_region_en,중국_장시성,China_Jiangxi Province,China_Jiangxi Province,yes,exact_map,4,彭澤縣,팽택현,행정 지명(치소)
+value:d65dd2aa147f,context,present_region,ad_ja_points,ad_ja_points.geojson,AD_JD_058; AD_JD_059; AD_JD_060; AD_JD_061; AD_JD_062; AD_JD_063; AD_JD_064; AD_JD_065; AD_JD_066; TS_014; TS_016; TS_018,현재 위치 광역 단위,present_region_en,중국_산둥성,China_Shandong Province,China_Shandong Province,yes,exact_map,13,郯城縣,담성현,행정 지명(치소)
+value:5bad33052dc0,context,present_region,ad_ja_points,ad_ja_points.geojson,AD_JA_019; AD_JA_020; AD_JA_021; AD_JA_022; AD_JA_023; AD_JA_026; AD_JA_027; AD_JA_028; AD_JA_029; HG_005; HG_006; MS_002,현재 위치 광역 단위,present_region_en,중국_저장성,"China_Zhejiang Province","China_Zhejiang Province",yes,exact_map,15,江山縣,강산현,행정 지명(치소)
+feature:a608edf430cd,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_036,현재 위치 기초 단위,present_locality_en,안칭시_다관구,"Daguan District, Anqing City","Daguan District, Anqing City",yes,reverse_geocode_osm_nominatim,1,安慶府,안경부,행정 지명(치소)
+feature:7e6f545ea605,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_032,현재 위치 기초 단위,present_locality_en,전장시_단양시,"Danyang City, Zhenjiang City","Danyang City, Zhenjiang City",yes,reverse_geocode_osm_nominatim,1,丹陽縣,단양현,행정 지명(치소)
+feature:937953647727,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_066,현재 위치 기초 단위,present_locality_en,더저우시_더청구,"Decheng District, Dezhou City","Decheng District, Dezhou City",yes,reverse_geocode_osm_nominatim,1,德州,덕주,행정 지명(치소)
+feature:15daa9996390,core,name,route_points,route_points.geojson,10,NM_KOR,name_en,하선,Disembarkation,Disembarkation,yes,exact_map,1,,하선,분기
+value:11da8ee3f437,core,subtype,wg_points,wg_points.geojson,WS_006,소분류,subtype_en,부두,"Dock / Wharf","Dock / Wharf",no,exact_map,1,淸江阜,청강부,수계 지명
+feature:4529ec5eb37b,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_077,현재 위치 기초 단위,present_locality_en,시청구,"Dongcheng District","Dongcheng District",yes,reverse_geocode_osm_nominatim,1,北京,북경,행정 지명(치소)
+feature:959edf47b16a,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_037,현재 위치 기초 단위,present_locality_en,츠저우시_둥즈현,"Dongzhi County, Chizhou City","Dongzhi County, Chizhou City",yes,reverse_geocode_osm_nominatim,1,東流縣,동류현,행정 지명(치소)
+feature:4779eb280b12,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_004,현재 위치 기초 단위,present_locality_en,타이난시_베이구,"East District, Tainan City","East District, Tainan City",yes,reverse_geocode_osm_nominatim,1,臺灣府,대만부,행정 지명(치소)
+value:c5924ac0c252,core,subtype,hg_points,hg_points.geojson,HG_002,소분류,subtype_en,교육시설,"Educational Site","Educational Site",no,exact_map,1,同安縣學,동안현학,인문 지명
+feature:07f7964a82b6,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_076,현재 위치 기초 단위,present_locality_en,팡산구,"Fangshan District","Fangshan District",yes,reverse_geocode_osm_nominatim,1,良鄕縣,양향현,행정 지명(치소)
+feature:fac279d8c4bd,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_068,현재 위치 기초 단위,present_locality_en,헝수이시_푸청현,"Fucheng County, Hengshui City","Fucheng County, Hengshui City",yes,reverse_geocode_osm_nominatim,1,阜城縣,부성현,행정 지명(치소)
+feature:f0cc95cbbbb2,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_010,현재 위치 기초 단위,present_locality_en,푸저우시_푸칭시,"Fuqing City, Fuzhou City","Fuqing City, Fuzhou City",yes,reverse_geocode_osm_nominatim,1,福淸縣,복청현,행정 지명(치소)
+feature:a3bef57b0d75,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_026,현재 위치 기초 단위,present_locality_en,항저우시_푸양구,"Fuyang District, Hangzhou City","Fuyang District, Hangzhou City",yes,reverse_geocode_osm_nominatim,1,富陽縣,부양현,행정 지명(치소)
+feature:33a6492a85c7,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_074,현재 위치 기초 단위,present_locality_en,바오딩시_가오베이뎬시,"Gaobeidian City, Baoding City","Gaobeidian City, Baoding City",yes,reverse_geocode_osm_nominatim,1,新城縣,신성현,행정 지명(치소)
+feature:8119875a1d89,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_050,현재 위치 기초 단위,present_locality_en,양저우시_가오유시,"Gaoyou City, Yangzhou City","Gaoyou City, Yangzhou City",yes,reverse_geocode_osm_nominatim,1,高郵州,고우주,행정 지명(치소)
+value:29dc2382bfe9,core,subtype,tg_points,tg_points.geojson,TS_012,소분류,subtype_en,관문,"Gate / Customs Pass","Gate / Customs Pass",no,exact_map,1,北新關,북신관,교통 지명
+feature:339cd437209b,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_027,현재 위치 기초 단위,present_locality_en,항저우시_샤청구,"Gongshu District, Hangzhou City","Gongshu District, Hangzhou City",yes,reverse_geocode_osm_nominatim,1,杭州府,항주부,행정 지명(치소)
+feature:3642ddbeae15,context,present_locality,hg_points,hg_points.geojson,HG_006,현재 위치 기초 단위,present_locality_en,항저우시_궁수구,"Gongshu District, Hangzhou City","Gongshu District, Hangzhou City",yes,reverse_geocode_osm_nominatim,1,大善寺,대선사,인문 지명
+feature:57b006de674b,context,present_locality,tg_points,tg_points.geojson,TS_012,현재 위치 기초 단위,present_locality_en,항저우시_궁수구,"Gongshu District, Hangzhou City","Gongshu District, Hangzhou City",yes,reverse_geocode_osm_nominatim,1,北新關,북신관,교통 지명
+value:b44b438710f4,optional,layer_title,canal_lines,canal_lines.geojson,canal_lines:0; canal_lines:1; canal_lines:2,_layer_title,layer_title_en,운하,"Grand Canal","Grand Canal",no,exact_map,3,杭州_鎭江,항주_진강,
+feature:8ac7669e90d1,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_048,현재 위치 기초 단위,present_locality_en,양저우시_광링구,"Guangling District, Yangzhou City","Guangling District, Yangzhou City",yes,reverse_geocode_osm_nominatim,1,江都縣,강도현,행정 지명(치소)
+feature:dd9ebc5e971e,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_045,현재 위치 기초 단위,present_locality_en,츠저우시_구이츠구,"Guichi District, Chizhou City","Guichi District, Chizhou City",yes,reverse_geocode_osm_nominatim,1,池州府,지주부,행정 지명(치소)
+feature:1274f2de4d57,context,present_locality,tg_points,tg_points.geojson,TS_013,현재 위치 기초 단위,present_locality_en,츠저우시_구이츠구,"Guichi District, Chizhou City","Guichi District, Chizhou City",yes,reverse_geocode_osm_nominatim,1,池口馹,지구일,교통 지명
+feature:f08f2aa006ef,context,present_locality,hg_points,hg_points.geojson,HG_003,현재 위치 기초 단위,present_locality_en,푸저우시_구러우구,"Gulou District, Fuzhou City","Gulou District, Fuzhou City",yes,reverse_geocode_osm_nominatim,1,法海寺,법해사,인문 지명
+feature:ecda4d8d2139,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_046,현재 위치 기초 단위,present_locality_en,쑤저우시_구쑤구,"Gusu District, Suzhou City","Gusu District, Suzhou City",yes,reverse_geocode_osm_nominatim,1,蘇州府,소주부,행정 지명(치소)
+feature:b120a50925c3,context,present_locality,hg_points,hg_points.geojson,HG_008,현재 위치 기초 단위,present_locality_en,쑤저우시_구쑤구,"Gusu District, Suzhou City","Gusu District, Suzhou City",yes,reverse_geocode_osm_nominatim,1,虎邱寺,호구사,인문 지명
+feature:b336c0527d85,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_014,현재 위치 기초 단위,present_locality_en,닝더시_구톈현,"Gutian County, Ningde City","Gutian County, Ningde City",yes,reverse_geocode_osm_nominatim,1,水口鎭,수구진,특수행정 지명
+feature:2a14d2353168,context,present_locality,tg_points,tg_points.geojson,TS_003,현재 위치 기초 단위,present_locality_en,닝더시_구톈현,"Gutian County, Ningde City","Gutian County, Ningde City",yes,reverse_geocode_osm_nominatim,1,黃田驛,황전역,교통 지명
+feature:0a7e0898ec20,core,name,canal_lines,canal_lines.geojson,canal_lines:0,NM_KOR,name_en,항주_진강,Hangzhou_Zhenjiang,Hangzhou_Zhenjiang,yes,exact_map,1,杭州_鎭江,항주_진강,
+feature:ead4bd00d586,core,name,canal_lines,canal_lines.geojson,canal_lines:2,NM_KOR,name_en,회하_천진,"Huai River_Tianjin","Huai River_Tianjin",yes,exact_map,1,淮河_天津,회하_천진,
+feature:2a27b9a31c96,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_053,현재 위치 기초 단위,present_locality_en,화이안시_화이안구,"Huai'an District, Huai'an City","Huai'an District, Huai'an City",yes,reverse_geocode_osm_nominatim,1,山陽縣,산양현,행정 지명(치소)
+feature:50403d33c3e5,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_055,현재 위치 기초 단위,present_locality_en,화이안시_화이안구,"Huaiyin District, Huai'an City","Huaiyin District, Huai'an City",yes,reverse_geocode_osm_nominatim,1,王家營鎭,왕가영진,특수행정 지명
+feature:08c1e01ee9f9,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_040,현재 위치 기초 단위,present_locality_en,황강시_황저우구,"Huangzhou District, Huanggang City","Huangzhou District, Huanggang City",yes,reverse_geocode_osm_nominatim,1,黃州府,황주부,행정 지명(치소)
+feature:41f33327640b,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_008,현재 위치 기초 단위,present_locality_en,취안저우시_후이안현,"Hui'an County, Quanzhou City","Hui'an County, Quanzhou City",yes,reverse_geocode_osm_nominatim,1,惠安縣,혜안현,행정 지명(치소)
+feature:fe4056a907fd,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_044,현재 위치 기초 단위,present_locality_en,주장시_후커우현,"Hukou County, Jiujiang City","Hukou County, Jiujiang City",yes,reverse_geocode_osm_nominatim,1,湖口縣,호구현,행정 지명(치소)
+value:06eb5d324f40,optional,layer_title,hg_points,hg_points.geojson,HG_001; HG_002; HG_003; HG_005; HG_006; HG_007; HG_008; HG_009; HG_010,_layer_title,layer_title_en,인문 지명,Human Geography,Human Geography,no,exact_map,9,大北門(臺灣府),대북문(대만부),인문 지명
+value:b5d2e6279437,core,category,hg_points,hg_points.geojson,HG_001; HG_002; HG_003; HG_005; HG_006; HG_007; HG_008; HG_009; HG_010,대분류,major_category_en,인문 지명,"Human Geography","Human Geography",no,exact_map,9,大北門(臺灣府),대북문(대만부),인문 지명
+feature:4a8aadb59ad0,context,present_locality,hg_points,hg_points.geojson,HG_009,현재 위치 기초 단위,present_locality_en,쑤저우시_구쑤구,"Huqiu District, Suzhou City","Huqiu District, Suzhou City",yes,reverse_geocode_osm_nominatim,1,寒山寺,한산사,인문 지명
+feature:e255f68078cd,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_016,현재 위치 기초 단위,present_locality_en,난핑시_젠어우시,"Jian'ou City, Nanping City","Jian'ou City, Nanping City",yes,reverse_geocode_osm_nominatim,1,建寧府,건녕부,행정 지명(치소)
+feature:196480f45819,context,present_locality,tg_points,tg_points.geojson,TS_007,현재 위치 기초 단위,present_locality_en,난핑시_젠어우시,"Jian'ou City, Nanping City","Jian'ou City, Nanping City",yes,reverse_geocode_osm_nominatim,1,太平驛,태평역,교통 지명
+feature:f8c481e910fc,context,present_locality,tg_points,tg_points.geojson,TS_008,현재 위치 기초 단위,present_locality_en,난핑시_젠어우시,"Jian'ou City, Nanping City","Jian'ou City, Nanping City",yes,reverse_geocode_osm_nominatim,1,葉坊巡司,엽방순사,교통 지명
+feature:641d179d4081,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_022,현재 위치 기초 단위,present_locality_en,항저우시_젠더시,"Jiande City, Hangzhou City","Jiande City, Hangzhou City",yes,reverse_geocode_osm_nominatim,1,建德縣,건덕현,행정 지명(치소)
+feature:1842fa78f138,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_023,현재 위치 기초 단위,present_locality_en,항저우시_젠더시,"Jiande City, Hangzhou City","Jiande City, Hangzhou City",yes,reverse_geocode_osm_nominatim,1,嚴州府,엄주부,행정 지명(치소)
+feature:1e39c529a68c,context,present_locality,mg_points,mg_points.geojson,MS_003,현재 위치 기초 단위,present_locality_en,항저우시_젠더시,"Jiande City, Hangzhou City","Jiande City, Hangzhou City",yes,reverse_geocode_osm_nominatim,1,梅嶺,매령,산계 지명
+feature:e0c911ddbefd,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_019,현재 위치 기초 단위,present_locality_en,취저우시_장산시,"Jiangshan City, Quzhou City","Jiangshan City, Quzhou City",yes,reverse_geocode_osm_nominatim,1,江山縣,강산현,행정 지명(치소)
+feature:cd1307f87a52,context,present_locality,mg_points,mg_points.geojson,MS_002,현재 위치 기초 단위,present_locality_en,취저우시_장산시,"Jiangshan City, Quzhou City","Jiangshan City, Quzhou City",yes,reverse_geocode_osm_nominatim,1,仙霞嶺,선하령,산계 지명
+feature:da5b0bb0d8e9,context,present_locality,tg_points,tg_points.geojson,TS_011,현재 위치 기초 단위,present_locality_en,취저우시_장산시,"Jiangshan City, Quzhou City","Jiangshan City, Quzhou City",yes,reverse_geocode_osm_nominatim,1,峽口站,협구참,교통 지명
+feature:a12f3a6c6325,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_017,현재 위치 기초 단위,present_locality_en,난핑시_젠양구,"Jianyang District, Nanping City","Jianyang District, Nanping City",yes,reverse_geocode_osm_nominatim,1,建陽縣,건양현,행정 지명(치소)
+feature:200e220f6228,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_042,현재 위치 기초 단위,present_locality_en,셴닝시_자위현,"Jiayu County, Xianning City","Jiayu County, Xianning City",yes,reverse_geocode_osm_nominatim,1,嘉魚縣,가어현,행정 지명(치소)
+feature:0e5789045a6d,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_012,현재 위치 기초 단위,present_locality_en,푸저우시_구러우구,"Jin'an District, Fuzhou City","Jin'an District, Fuzhou City",yes,reverse_geocode_osm_nominatim,1,福建省,복건성,행정 지명(치소)
+feature:e9f8b1306318,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_067,현재 위치 기초 단위,present_locality_en,헝수이시_징현,"Jing County, Hengshui City","Jing County, Hengshui City",yes,reverse_geocode_osm_nominatim,1,景州,경주,행정 지명(치소)
+feature:a064f10365f0,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_034,현재 위치 기초 단위,present_locality_en,우후시_징후구,"Jinghu District, Wuhu City","Jinghu District, Wuhu City",yes,reverse_geocode_osm_nominatim,1,蕪湖縣,무호현,행정 지명(치소)
+value:a1c1625fe80c,core,category,ad_ja_points,ad_ja_points.geojson,AD_JA_001; AD_JA_002; AD_JA_003; AD_JA_006; AD_JA_014; AD_JD_055; AD_JD_056,대분류,major_category_en,특수행정 지명,"Jurisdictional Agency","Jurisdictional Agency",no,exact_map,7,東衛,동위,특수행정 지명
+feature:49009c2702a8,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_020,현재 위치 기초 단위,present_locality_en,취저우시_커청구,"Kecheng District, Quzhou City","Kecheng District, Quzhou City",yes,reverse_geocode_osm_nominatim,1,衢州府,구주부,행정 지명(치소)
+value:e065f60ec7f3,optional,layer_title,route_points,route_points.geojson,1; 2; 3; 4; 5; 6; 7; 9; 10; 8,_layer_title,layer_title_en,주요 지점,Key Stops,Key Stops,no,exact_map,10,,표착지,표착지
+value:54c2e7ee2d13,core,subtype,wg_points,wg_points.geojson,WS_002; WS_004,소분류,subtype_en,호수,Lake,Lake,no,exact_map,2,洞庭湖,동정호,수계 지명
+feature:d80c77d7a3bb,core,name,route_points,route_points.geojson,1,NM_KOR,name_en,표착지,Landfall,Landfall,yes,exact_map,1,,표착지,표착지
+value:17f3b871b325,core,type,route_points,route_points.geojson,1,TYPE_NAME,type_en,표착지,"Landfall","Landfall",no,exact_map,1,,표착지,표착지
+feature:b40c15315a23,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_059,현재 위치 기초 단위,present_locality_en,린이시_란샨구,"Lanshan District, Linyi City","Lanshan District, Linyi City",yes,reverse_geocode_osm_nominatim,1,蘭山縣,난산현,행정 지명(치소)
+feature:5d9a90c07812,core,name,canal_lines,canal_lines.geojson,canal_lines:1,NM_KOR,name_en,양회운하,"Lianghuai Canal","Lianghuai Canal",yes,exact_map,1,揚淮運河,양회운하,
+feature:007d3f866223,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_030,현재 위치 기초 단위,present_locality_en,우시시_충안구,"Liangxi District, Wuxi City","Liangxi District, Wuxi City",yes,reverse_geocode_osm_nominatim,1,無錫縣,무석현,행정 지명(치소)
+feature:b86290c8d598,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_007,현재 위치 기초 단위,present_locality_en,취안저우시_리청구,"Licheng District, Quanzhou City","Licheng District, Quanzhou City",yes,reverse_geocode_osm_nominatim,1,泉州府,천주부,행정 지명(치소)
+feature:1a59a33c48c1,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_021,현재 위치 기초 단위,present_locality_en,취저우시_룽유현,"Longyou County, Quzhou City","Longyou County, Quzhou City",yes,reverse_geocode_osm_nominatim,1,龍游縣,용유현,행정 지명(치소)
+feature:4fe6515a7041,context,present_locality,tg_points,tg_points.geojson,TS_001,현재 위치 기초 단위,present_locality_en,취안저우시_뤄장구,"Luojiang District, Quanzhou City","Luojiang District, Quanzhou City",yes,reverse_geocode_osm_nominatim,1,洛陽橋,낙양교,교통 지명
+feature:3e6760af5d3c,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_001,현재 위치 기초 단위,present_locality_en,펑후현_마궁시,"Magong City, Penghu County","Magong City, Penghu County",yes,reverse_geocode_osm_nominatim,1,東衛,동위,특수행정 지명
+feature:f5019620030b,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_002,현재 위치 기초 단위,present_locality_en,펑후현_마궁시,"Magong City, Penghu County","Magong City, Penghu County",yes,reverse_geocode_osm_nominatim,1,媽宮,마궁,특수행정 지명
+feature:de4fb3f157fc,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_003,현재 위치 기초 단위,present_locality_en,펑후현_마궁시,"Magong City, Penghu County","Magong City, Penghu County",yes,reverse_geocode_osm_nominatim,1,協鎭衙門,협진아문,특수행정 지명
+feature:eb4091640f73,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_060,현재 위치 기초 단위,present_locality_en,린이시_멍인현,"Mengyin County, Linyi City","Mengyin County, Linyi City",yes,reverse_geocode_osm_nominatim,1,蒙陰縣,몽음현,행정 지명(치소)
+value:f7ce3882f2b1,core,subtype,ad_ja_points,ad_ja_points.geojson,AD_JA_014; AD_JD_055,소분류,subtype_en,군사시설,"Military Facility","Military Facility",no,exact_map,2,水口鎭,수구진,특수행정 지명
+feature:2f486ef1760b,context,present_locality,tg_points,tg_points.geojson,TS_002,현재 위치 기초 단위,present_locality_en,푸저우시_민허우현,"Minhou County, Fuzhou City","Minhou County, Fuzhou City",yes,reverse_geocode_osm_nominatim,1,黃津橋,황진교,교통 지명
+feature:cbb5b593ffcf,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_013,현재 위치 기초 단위,present_locality_en,푸저우시_민칭현,"Minqing County, Fuzhou City","Minqing County, Fuzhou City",yes,reverse_geocode_osm_nominatim,1,閩淸縣,민청현,행정 지명(치소)
+value:915e4570c405,core,subtype,mg_points,mg_points.geojson,MS_001; MS_002; MS_003,소분류,subtype_en,고개,Mountain Pass,Mountain Pass,no,exact_map,3,西陽嶺,서양령,산계 지명
+value:c1ae31ae3b18,optional,layer_title,mg_points,mg_points.geojson,MS_001; MS_002; MS_003,_layer_title,layer_title_en,산계 지명,Mountain System,Mountain System,no,exact_map,3,西陽嶺,서양령,산계 지명
+value:5c5a9de8efc8,core,category,mg_points,mg_points.geojson,MS_001; MS_002; MS_003,대분류,major_category_en,산계 지명,"Mountain System","Mountain System",no,exact_map,3,西陽嶺,서양령,산계 지명
+feature:ef98def65fef,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_029,현재 위치 기초 단위,present_locality_en,자싱시_난후구,"Nanhu District, Jiaxing City","Nanhu District, Jiaxing City",yes,reverse_geocode_osm_nominatim,1,嘉興府,가흥부,행정 지명(치소)
+feature:58d047351a96,context,present_locality,hg_points,hg_points.geojson,HG_001,현재 위치 기초 단위,present_locality_en,타이난시_베이구,"North District, Tainan City","North District, Tainan City",yes,reverse_geocode_osm_nominatim,1,大北門(臺灣府),대북문(대만부),인문 지명
+feature:0cb764fa8c68,core,note,route_points,route_points.geojson,5,NOTE,note_en,1796년 12월 10일 관리 접견,"Official reception on December 10, 1796","Official reception on December 10, 1796",yes,exact_map,1,,대만부 체류,체류지
+value:41727219be6e,core,subtype,ad_ja_points,ad_ja_points.geojson,AD_JA_001; AD_JA_002; AD_JD_056,소분류,subtype_en,기타 행정/군사시설,Other Administrative / Military Facility,Other Administrative / Military Facility,no,exact_map,3,東衛,동위,특수행정 지명
+value:7d1301c1560e,core,subtype,ad_ja_points,ad_ja_points.geojson,AD_JA_006,소분류,subtype_en,기타 행정시설,"Other Administrative Facility","Other Administrative Facility",no,exact_map,1,馬巷廳,마항청,특수행정 지명
+feature:ee49a8b51320,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_038,현재 위치 기초 단위,present_locality_en,주장시_펑저현,"Pengze County, Jiujiang City","Pengze County, Jiujiang City",yes,reverse_geocode_osm_nominatim,1,彭澤縣,팽택현,행정 지명(치소)
+feature:e559ecfefd02,core,name,route_points,route_points.geojson,9,NM_KOR,name_en,동정호 방문 제안,"Proposal to Visit Dongting Lake","Proposal to Visit Dongting Lake",yes,exact_map,1,,동정호 방문 제안,분기
+feature:1d8519e490fe,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_018,현재 위치 기초 단위,present_locality_en,난핑시_푸청현,"Pucheng County, Nanping City","Pucheng County, Nanping City",yes,reverse_geocode_osm_nominatim,1,浦城縣,포성현,행정 지명(치소)
+feature:b4de8bd7078b,context,present_locality,mg_points,mg_points.geojson,MS_001,현재 위치 기초 단위,present_locality_en,난핑시_푸청현,"Pucheng County, Nanping City","Pucheng County, Nanping City",yes,reverse_geocode_osm_nominatim,1,西陽嶺,서양령,산계 지명
+feature:b8ec16f6e041,context,present_locality,tg_points,tg_points.geojson,TS_009,현재 위치 기초 단위,present_locality_en,난핑시_푸청현,"Pucheng County, Nanping City","Pucheng County, Nanping City",yes,reverse_geocode_osm_nominatim,1,人和驛,인화역,교통 지명
+feature:fac1f55ea711,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_064,현재 위치 기초 단위,present_locality_en,더저우시_치허현,"Qihe County, Dezhou City","Qihe County, Dezhou City",yes,reverse_geocode_osm_nominatim,1,濟河縣,제하현,행정 지명(치소)
+feature:3f73d8e0d0e8,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_052,현재 위치 기초 단위,present_locality_en,화이안시_칭장푸구,"Qingjiangpu District, Huai'an City","Qingjiangpu District, Huai'an City",yes,reverse_geocode_osm_nominatim,1,淮安府,회안부,행정 지명(치소)
+feature:656e2fcd37bc,context,present_locality,wg_points,wg_points.geojson,WS_006,현재 위치 기초 단위,present_locality_en,화이안시_칭허구,"Qingjiangpu District, Huai'an City","Qingjiangpu District, Huai'an City",yes,reverse_geocode_osm_nominatim,1,淸江阜,청강부,수계 지명
+value:6417036f80af,core,subtype,tg_points,tg_points.geojson,TS_003; TS_006; TS_007; TS_008; TS_009; TS_011; TS_013; TS_014; TS_016; TS_018; TS_019,소분류,subtype_en,역참,"Relay Station","Relay Station",no,exact_map,11,黃田驛,황전역,교통 지명
+feature:dd37df3cbfde,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_072,현재 위치 기초 단위,present_locality_en,창저우시_런추시,"Renqiu City, Cangzhou City","Renqiu City, Cangzhou City",yes,reverse_geocode_osm_nominatim,1,任丘縣,임구현,행정 지명(치소)
+value:9c6f98dd53e9,core,subtype,wg_points,wg_points.geojson,WS_001,소분류,subtype_en,하천,"River","River",no,exact_map,1,八里江,팔리강,수계 지명
+feature:429f73f400ec,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_033,현재 위치 기초 단위,present_locality_en,전장시_룬저우구,"Runzhou District, Zhenjiang City","Runzhou District, Zhenjiang City",yes,reverse_geocode_osm_nominatim,1,鎭江府,진강부,행정 지명(치소)
+feature:cc86650c8255,context,present_locality,hg_points,hg_points.geojson,HG_010,현재 위치 기초 단위,present_locality_en,전장시_룬저우구,"Runzhou District, Zhenjiang City","Runzhou District, Zhenjiang City",yes,reverse_geocode_osm_nominatim,1,金山寺,금산사,인문 지명
+feature:b5687322d7d2,context,present_locality,wg_points,wg_points.geojson,WS_005,현재 위치 기초 단위,present_locality_en,전장시_룬저우구,"Runzhou District, Zhenjiang City","Runzhou District, Zhenjiang City",yes,reverse_geocode_osm_nominatim,1,瓜洲,과주,수계 지명
+value:26e68e13ee93,core,subtype,wg_points,wg_points.geojson,WS_005,소분류,subtype_en,모래톱,"Sandbar","Sandbar",no,exact_map,1,瓜洲,과주,수계 지명
+feature:93330ad6c818,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_063,현재 위치 기초 단위,present_locality_en,지난시_스중구,"Shizhong District, Jinan City","Shizhong District, Jinan City",yes,reverse_geocode_osm_nominatim,1,濟南府,제남부,행정 지명(치소)
+feature:425465754493,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_056,현재 위치 기초 단위,present_locality_en,쑤첸시_쓰양현,"Siyang County, Suqian City","Siyang County, Suqian City",yes,reverse_geocode_osm_nominatim,1,衆興集,중흥집,특수행정 지명
+feature:759b5d41618e,core,name,route_points,route_points.geojson,2,NM_KOR,name_en,동위 체류,Stay at Dongwei,Stay at Dongwei,yes,exact_map,1,,동위 체류,체류지
+feature:c85a2c045187,core,name,route_points,route_points.geojson,3,NM_KOR,name_en,마궁 체류,Stay at Magong,Stay at Magong,yes,exact_map,1,,마궁 체류,체류지
+feature:2ddd9b9de9f4,core,name,route_points,route_points.geojson,5,NM_KOR,name_en,대만부 체류,Stay at Taiwan Fu,Stay at Taiwan Fu,yes,exact_map,1,,대만부 체류,체류지
+feature:0e731868b1b8,core,name,route_points,route_points.geojson,6,NM_KOR,name_en,동안현 체류,Stay at Tongan Xian,Stay at Tongan Xian,yes,exact_map,1,,동안현 체류,체류지
+feature:5dad6b9ce9df,core,name,route_points,route_points.geojson,4,NM_KOR,name_en,협진아문 체류,Stay at Xiezhen Yamen,Stay at Xiezhen Yamen,yes,exact_map,1,,협진아문 체류,체류지
+feature:a05ce6b2d367,core,note,route_points,route_points.geojson,3,NOTE,note_en,체류 기간: 10일,Stay duration: 10 days,Stay duration: 10 days,yes,exact_map,1,,마궁 체류,체류지
+feature:7efe4254c7de,core,note,route_points,route_points.geojson,2,NOTE,note_en,체류 기간: 6~7일,"Stay duration: 6-7 days","Stay duration: 6-7 days",yes,exact_map,1,,동위 체류,체류지
+feature:7b21eda6277a,core,note,route_points,route_points.geojson,4,NOTE,note_en,체류 기간: 약 한 달,Stay duration: about one month,Stay duration: about one month,yes,exact_map,1,,협진아문 체류,체류지
+feature:e00f1549e78e,core,note,route_points,route_points.geojson,7,NOTE,note_en,체류 기간: 두 달 6일 (1797년 1월 5일부터 3월 11일 또는 12일까지),"Stay duration: two months and 6 days (from January 5, 1797 to March 11 or 12)","Stay duration: two months and 6 days (from January 5, 1797 to March 11 or 12)",yes,exact_map,1,,복건성 내 체류,체류지
+feature:fcc64655a317,core,name,route_points,route_points.geojson,7,NM_KOR,name_en,복건성 내 체류,Stay in Fujian Province,Stay in Fujian Province,yes,exact_map,1,,복건성 내 체류,체류지
+value:71c242f085f4,core,type,route_points,route_points.geojson,2; 3; 4; 5; 6; 7,TYPE_NAME,type_en,체류지,"Stay Point","Stay Point",no,exact_map,6,,동위 체류,체류지
+feature:5a784512560e,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_062,현재 위치 기초 단위,present_locality_en,타이안시_타이샨구,"Taishan District, Tai'an City","Taishan District, Tai'an City",yes,reverse_geocode_osm_nominatim,1,泰安府,태안부,행정 지명(치소)
+value:87638fb7e6ff,context,present_region,ad_ja_points,ad_ja_points.geojson,AD_JA_001; AD_JA_002; AD_JA_003; AD_JA_004; HG_001,현재 위치 광역 단위,present_region_en,대만,"Taiwan","Taiwan",yes,exact_map,5,東衛,동위,특수행정 지명
+feature:bcb8a7ffd9ec,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_058,현재 위치 기초 단위,present_locality_en,린이시_탄청현,"Tancheng County, Linyi City","Tancheng County, Linyi City",yes,reverse_geocode_osm_nominatim,1,郯城縣,담성현,행정 지명(치소)
+feature:c3e31a214b33,context,present_locality,tg_points,tg_points.geojson,TS_014,현재 위치 기초 단위,present_locality_en,린이시_탄청현,"Tancheng County, Linyi City","Tancheng County, Linyi City",yes,reverse_geocode_osm_nominatim,1,李家庄驛,이가장역,교통 지명
+value:a5095790e5c8,optional,layer_title,county_points,county_points.geojson,200001; 95008; 95011; 95027; 95037; 95048; 95054; 95059; 95067; 95074; 95090; 95113,_layer_title,layer_title_en,시계열 현급 행정 지점,"Time-series County Seats","Time-series County Seats",no,exact_map,1695,保德州,Baode Zhou,州
+feature:c52a02e9664c,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_005,현재 위치 기초 단위,present_locality_en,샤먼시_퉁안구,"Tong'an District, Xiamen City","Tong'an District, Xiamen City",yes,reverse_geocode_osm_nominatim,1,同安縣,동안현,행정 지명(치소)
+feature:73798d0fa190,context,present_locality,hg_points,hg_points.geojson,HG_002,현재 위치 기초 단위,present_locality_en,샤먼시_퉁안구,"Tong'an District, Xiamen City","Tong'an District, Xiamen City",yes,reverse_geocode_osm_nominatim,1,同安縣學,동안현학,인문 지명
+feature:210979ab38e9,context,present_locality,hg_points,hg_points.geojson,HG_005,현재 위치 기초 단위,present_locality_en,항저우시_퉁루현,"Tonglu County, Hangzhou City","Tonglu County, Hangzhou City",yes,reverse_geocode_osm_nominatim,1,釣臺,조대,인문 지명
+feature:cf87e44cf380,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_028,현재 위치 기초 단위,present_locality_en,자싱시_퉁샹시,"Tongxiang City, Jiaxing City","Tongxiang City, Jiaxing City",yes,reverse_geocode_osm_nominatim,1,石門縣,석문현,행정 지명(치소)
+value:b3dffd566119,optional,layer_title,tg_points,tg_points.geojson,TS_001; TS_002; TS_003; TS_006; TS_007; TS_008; TS_009; TS_011; TS_012; TS_013; TS_014; TS_016,_layer_title,layer_title_en,교통 지명,Transport System,Transport System,no,exact_map,14,洛陽橋,낙양교,교통 지명
+value:146c7303308c,core,category,tg_points,tg_points.geojson,TS_001; TS_002; TS_003; TS_006; TS_007; TS_008; TS_009; TS_011; TS_012; TS_013; TS_014; TS_016,대분류,major_category_en,교통 지명,Transport System,Transport System,no,exact_map,14,洛陽橋,낙양교,교통 지명
+value:2b5fbc7fdc1c,optional,layer_title,wg_points,wg_points.geojson,WS_001; WS_002; WS_004; WS_005; WS_006,_layer_title,layer_title_en,수계 지명,Water System,Water System,no,exact_map,5,八里江,팔리강,수계 지명
+value:f11d368f1787,core,category,wg_points,wg_points.geojson,WS_001; WS_002; WS_004; WS_005; WS_006,대분류,major_category_en,수계 지명,"Water System","Water System",no,exact_map,5,八里江,팔리강,수계 지명
+feature:c8728f872d5f,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_041,현재 위치 기초 단위,present_locality_en,우한시_우창구,"Wuchang District, Wuhan City","Wuchang District, Wuhan City",yes,reverse_geocode_osm_nominatim,1,武昌府,무창부,행정 지명(치소)
+feature:a7261202a678,context,present_locality,hg_points,hg_points.geojson,HG_007,현재 위치 기초 단위,present_locality_en,쑤저우시_우종구,"Wuzhong District, Suzhou City","Wuzhong District, Suzhou City",yes,reverse_geocode_osm_nominatim,1,姑蘇臺,고소대,인문 지명
+feature:34a59dae9109,context,present_locality,wg_points,wg_points.geojson,WS_004,현재 위치 기초 단위,present_locality_en,쑤저우시_우중구,"Wuzhong District, Suzhou City","Wuzhong District, Suzhou City",yes,reverse_geocode_osm_nominatim,1,太湖,태호,수계 지명
+feature:7c7d3c13c966,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_070,현재 위치 기초 단위,present_locality_en,창저우시_셴현,"Xian County, Cangzhou City","Xian County, Cangzhou City",yes,reverse_geocode_osm_nominatim,1,獻縣,헌현,행정 지명(치소)
+feature:693ed9662d98,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_006,현재 위치 기초 단위,present_locality_en,샤먼시_샹안구,"Xiang'an District, Xiamen City","Xiang'an District, Xiamen City",yes,reverse_geocode_osm_nominatim,1,馬巷廳,마항청,특수행정 지명
+feature:6859c37cc1ec,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_061,현재 위치 기초 단위,present_locality_en,타이안시_신타이시,"Xintai City, Tai'an City","Xintai City, Tai'an City",yes,reverse_geocode_osm_nominatim,1,新太縣,신태현,행정 지명(치소)
+feature:0716ab5dd276,context,present_locality,tg_points,tg_points.geojson,TS_018,현재 위치 기초 단위,present_locality_en,타이안시_신타이시,"Xintai City, Tai'an City","Xintai City, Tai'an City",yes,reverse_geocode_osm_nominatim,1,羊流店,양류점,교통 지명
+feature:fdaebf95062e,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_073,현재 위치 기초 단위,present_locality_en,바오딩시_슝현,"Xiong County, Xiong'an New Area","Xiong County, Xiong'an New Area",yes,reverse_geocode_osm_nominatim,1,雄縣,웅현,행정 지명(치소)
+feature:b3886e27b06f,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_039,현재 위치 기초 단위,present_locality_en,"주장시_쉰양구","Xunyang District, Jiujiang City","Xunyang District, Jiujiang City",yes,reverse_geocode_osm_nominatim,1,九江府,구강부,행정 지명(치소)
+feature:5f1f34e275f7,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_015,현재 위치 기초 단위,present_locality_en,난핑시_옌핑구,"Yanping District, Nanping City","Yanping District, Nanping City",yes,reverse_geocode_osm_nominatim,1,南平縣,남평현,행정 지명(치소)
+feature:c92aecc472ee,context,present_locality,tg_points,tg_points.geojson,TS_006,현재 위치 기초 단위,present_locality_en,난핑시_옌핑구,"Yanping District, Nanping City","Yanping District, Nanping City",yes,reverse_geocode_osm_nominatim,1,大王館,대왕관,교통 지명
+feature:62222d6b9dd1,core,note,route_points,route_points.geojson,8,NOTE,note_en,이방익 일행의 신분이 표류민으로 확정됨,"Yi Bang-ik and his party were confirmed as castaways","Yi Bang-ik and his party were confirmed as castaways",yes,exact_map,1,,표류민 신분 확정,분기
+feature:3849cbedeed9,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_035,현재 위치 기초 단위,present_locality_en,통링시_이안구,"Yi'an District, Tongling City","Yi'an District, Tongling City",yes,reverse_geocode_osm_nominatim,1,銅陵縣,동릉현,행정 지명(치소)
+feature:a8ba4b999e1a,context,present_locality,tg_points,tg_points.geojson,TS_016,현재 위치 기초 단위,present_locality_en,린이시_이난현,"Yinan County, Linyi City","Yinan County, Linyi City",yes,reverse_geocode_osm_nominatim,1,徐公店驛,서공점역,교통 지명
+feature:7a6c2d1f4f4f,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_065,현재 위치 기초 단위,present_locality_en,더저우시_위청시,"Yucheng City, Dezhou City","Yucheng City, Dezhou City",yes,reverse_geocode_osm_nominatim,1,禹城縣,우성현,행정 지명(치소)
+feature:6c1f54904082,context,present_locality,wg_points,wg_points.geojson,WS_002,현재 위치 기초 단위,present_locality_en,웨양시,"Yueyang County","Yueyang County",yes,reverse_geocode_osm_nominatim,1,洞庭湖,동정호,수계 지명
+feature:88c0562a6040,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_043,현재 위치 기초 단위,present_locality_en,웨양시_웨양현,"Yueyanglou District, Yueyang City","Yueyanglou District, Yueyang City",yes,reverse_geocode_osm_nominatim,1,岳州府,악주부,행정 지명(치소)
+feature:3e092c340f3f,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JA_031,현재 위치 기초 단위,present_locality_en,창저우시_톈닝구,"Zhonglou District, Changzhou City","Zhonglou District, Changzhou City",yes,reverse_geocode_osm_nominatim,1,常州府,상주부,행정 지명(치소)
+feature:0aca35a7b5e9,context,present_locality,ad_ja_points,ad_ja_points.geojson,AD_JD_075,현재 위치 기초 단위,present_locality_en,바오딩시_줘저우시,"Zhuozhou City, Baoding City","Zhuozhou City, Baoding City",yes,reverse_geocode_osm_nominatim,1,涿州,탁주,행정 지명(치소)
+feature:cca9a0b407ee,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_032,한국어이름,name_en,단양현,丹陽縣,丹陽縣,yes,hanja_placeholder,1,丹陽縣,단양현,행정 지명(치소)
+feature:f491359d0489,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_039,한국어이름,name_en,구강부,九江府,九江府,yes,hanja_placeholder,1,九江府,구강부,행정 지명(치소)
+feature:4d85903fda67,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_069,한국어이름,name_en,교하현,交河縣,交河縣,yes,hanja_placeholder,1,交河縣,교하현,행정 지명(치소)
+feature:5358e99b595a,core,place_name,tg_points,tg_points.geojson,TS_009,한국어이름,name_en,인화역,人和驛,人和驛,yes,hanja_placeholder,1,人和驛,인화역,교통 지명
+feature:a23baaeca53a,core,place_name,mg_points,mg_points.geojson,MS_002,한국어이름,name_en,선하령,仙霞嶺,仙霞嶺,yes,hanja_placeholder,1,仙霞嶺,선하령,산계 지명
+feature:833d16a59bc9,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_072,한국어이름,name_en,임구현,任丘縣,任丘縣,yes,hanja_placeholder,1,任丘縣,임구현,행정 지명(치소)
+feature:72b5529af8b0,core,place_name,wg_points,wg_points.geojson,WS_001,한국어이름,name_en,팔리강,八里江,八里江,yes,hanja_placeholder,1,八里江,팔리강,수계 지명
+feature:fa6fb94a555c,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_077,한국어이름,name_en,북경,北京,北京,yes,hanja_placeholder,1,北京,북경,행정 지명(치소)
+feature:0e9ad6876fab,core,place_name,tg_points,tg_points.geojson,TS_012,한국어이름,name_en,북신관,北新關,北新關,yes,hanja_placeholder,1,北新關,북신관,교통 지명
+feature:52aa5453fe89,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_003,한국어이름,name_en,협진아문,協鎭衙門,協鎭衙門,yes,hanja_placeholder,1,協鎭衙門,협진아문,특수행정 지명
+feature:00a5817c4a1e,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_015,한국어이름,name_en,남평현,南平縣,南平縣,yes,hanja_placeholder,1,南平縣,남평현,행정 지명(치소)
+feature:40f7a1a1ed86,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_005,한국어이름,name_en,동안현,同安縣,同安縣,yes,hanja_placeholder,1,同安縣,동안현,행정 지명(치소)
+feature:4c5f6c564bfc,core,place_name,hg_points,hg_points.geojson,HG_002,한국어이름,name_en,동안현학,同安縣學,同安縣學,yes,hanja_placeholder,1,同安縣學,동안현학,인문 지명
+feature:6173f6827939,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_029,한국어이름,name_en,가흥부,嘉興府,嘉興府,yes,hanja_placeholder,1,嘉興府,가흥부,행정 지명(치소)
+feature:4d30c686ebe6,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_042,한국어이름,name_en,가어현,嘉魚縣,嘉魚縣,yes,hanja_placeholder,1,嘉魚縣,가어현,행정 지명(치소)
+feature:d45d3c72e3eb,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_023,한국어이름,name_en,엄주부,嚴州府,嚴州府,yes,hanja_placeholder,1,嚴州府,엄주부,행정 지명(치소)
+feature:005ade2571e4,core,place_name,hg_points,hg_points.geojson,HG_001,한국어이름,name_en,대북문(대만부),大北門(臺灣府),大北門(臺灣府),yes,hanja_placeholder,1,大北門(臺灣府),대북문(대만부),인문 지명
+feature:c9162dfcbb1e,core,place_name,hg_points,hg_points.geojson,HG_006,한국어이름,name_en,대선사,大善寺,大善寺,yes,hanja_placeholder,1,大善寺,대선사,인문 지명
+feature:77b7b252bf06,core,place_name,tg_points,tg_points.geojson,TS_006,한국어이름,name_en,대왕관,大王館,大王館,yes,hanja_placeholder,1,大王館,대왕관,교통 지명
+feature:5c7b44b470ff,core,place_name,tg_points,tg_points.geojson,TS_007,한국어이름,name_en,태평역,太平驛,太平驛,yes,hanja_placeholder,1,太平驛,태평역,교통 지명
+feature:e2b6a2b59632,core,place_name,wg_points,wg_points.geojson,WS_004,한국어이름,name_en,태호,太湖,太湖,yes,hanja_placeholder,1,太湖,태호,수계 지명
+feature:04d9caef18e2,core,place_name,hg_points,hg_points.geojson,HG_007,한국어이름,name_en,고소대,姑蘇臺,姑蘇臺,yes,hanja_placeholder,1,姑蘇臺,고소대,인문 지명
+feature:6934d1faa146,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_002,한국어이름,name_en,마궁,媽宮,媽宮,yes,hanja_placeholder,1,媽宮,마궁,특수행정 지명
+feature:c889908b8a2b,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_036,한국어이름,name_en,안경부,安慶府,安慶府,yes,hanja_placeholder,1,安慶府,안경부,행정 지명(치소)
+feature:6c6a303b0a17,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_026,한국어이름,name_en,부양현,富陽縣,富陽縣,yes,hanja_placeholder,1,富陽縣,부양현,행정 지명(치소)
+feature:5fc60a12f7c1,core,place_name,hg_points,hg_points.geojson,HG_009,한국어이름,name_en,한산사,寒山寺,寒山寺,yes,hanja_placeholder,1,寒山寺,한산사,인문 지명
+feature:c5659d7a73d4,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_051,한국어이름,name_en,보응현,寶應縣,寶應縣,yes,hanja_placeholder,1,寶應縣,보응현,행정 지명(치소)
+feature:2aad62510325,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_053,한국어이름,name_en,산양현,山陽縣,山陽縣,yes,hanja_placeholder,1,山陽縣,산양현,행정 지명(치소)
+feature:83551f709dcf,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_043,한국어이름,name_en,악주부,岳州府,岳州府,yes,hanja_placeholder,1,岳州府,악주부,행정 지명(치소)
+feature:693ee5aa4845,core,place_name,tg_points,tg_points.geojson,TS_011,한국어이름,name_en,협구참,峽口站,峽口站,yes,hanja_placeholder,1,峽口站,협구참,교통 지명
+feature:d37466799dd4,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_031,한국어이름,name_en,상주부,常州府,常州府,yes,hanja_placeholder,1,常州府,상주부,행정 지명(치소)
+feature:302e60e0248d,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_016,한국어이름,name_en,건녕부,建寧府,建寧府,yes,hanja_placeholder,1,建寧府,건녕부,행정 지명(치소)
+feature:ec4f814bcb11,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_022,한국어이름,name_en,건덕현,建德縣,建德縣,yes,hanja_placeholder,1,建德縣,건덕현,행정 지명(치소)
+feature:86f62f1cbede,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_017,한국어이름,name_en,건양현,建陽縣,建陽縣,yes,hanja_placeholder,1,建陽縣,건양현,행정 지명(치소)
+feature:fad027e4fa4d,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_038,한국어이름,name_en,팽택현,彭澤縣,彭澤縣,yes,hanja_placeholder,1,彭澤縣,팽택현,행정 지명(치소)
+feature:5f039cbd14f1,core,place_name,tg_points,tg_points.geojson,TS_016,한국어이름,name_en,서공점역,徐公店驛,徐公店驛,yes,hanja_placeholder,1,徐公店驛,서공점역,교통 지명
+feature:b543bfe2d95b,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_066,한국어이름,name_en,덕주,德州,德州,yes,hanja_placeholder,1,德州,덕주,행정 지명(치소)
+feature:8e65c3e79fe0,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_008,한국어이름,name_en,혜안현,惠安縣,惠安縣,yes,hanja_placeholder,1,惠安縣,혜안현,행정 지명(치소)
+feature:af2ee680f5c8,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_074,한국어이름,name_en,신성현,新城縣,新城縣,yes,hanja_placeholder,1,新城縣,신성현,행정 지명(치소)
+feature:14f9f7ec3e77,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_061,한국어이름,name_en,신태현,新太縣,新太縣,yes,hanja_placeholder,1,新太縣,신태현,행정 지명(치소)
+feature:8619d7f835e9,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_067,한국어이름,name_en,경주,景州,景州,yes,hanja_placeholder,1,景州,경주,행정 지명(치소)
+feature:9fe7d3a1e823,core,place_name,tg_points,tg_points.geojson,TS_014,한국어이름,name_en,이가장역,李家庄驛,李家庄驛,yes,hanja_placeholder,1,李家庄驛,이가장역,교통 지명
+feature:c541fca1dfe5,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_027,한국어이름,name_en,항주부,杭州府,杭州府,yes,hanja_placeholder,1,杭州府,항주부,행정 지명(치소)
+feature:dd4dcb93c28f,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_037,한국어이름,name_en,동류현,東流縣,東流縣,yes,hanja_placeholder,1,東流縣,동류현,행정 지명(치소)
+feature:b4e841735ab2,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_001,한국어이름,name_en,동위,東衛,東衛,yes,hanja_placeholder,1,東衛,동위,특수행정 지명
+feature:3fe63cb3492e,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_025,한국어이름,name_en,동로현,桐盧縣,桐盧縣,yes,hanja_placeholder,1,桐盧縣,동로현,행정 지명(치소)
+feature:15e03f0d97ca,core,place_name,mg_points,mg_points.geojson,MS_003,한국어이름,name_en,매령,梅嶺,梅嶺,yes,hanja_placeholder,1,梅嶺,매령,산계 지명
+feature:15418f177dde,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_041,한국어이름,name_en,무창부,武昌府,武昌府,yes,hanja_placeholder,1,武昌府,무창부,행정 지명(치소)
+feature:25519b6deafd,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_014,한국어이름,name_en,수구진,水口鎭,水口鎭,yes,hanja_placeholder,1,水口鎭,수구진,특수행정 지명
+feature:988f1e4e40a6,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_019,한국어이름,name_en,강산현,江山縣,江山縣,yes,hanja_placeholder,1,江山縣,강산현,행정 지명(치소)
+feature:ad194de9d92e,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_048,한국어이름,name_en,강도현,江都縣,江都縣,yes,hanja_placeholder,1,江都縣,강도현,행정 지명(치소)
+feature:8c28e4fc80a7,core,place_name,tg_points,tg_points.geojson,TS_013,한국어이름,name_en,지구일,池口馹,池口馹,yes,hanja_placeholder,1,池口馹,지구일,교통 지명
+feature:276d89b34c7f,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_045,한국어이름,name_en,지주부,池州府,池州府,yes,hanja_placeholder,1,池州府,지주부,행정 지명(치소)
+feature:274caf5f2566,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_071,한국어이름,name_en,하간부,河間府,河間府,yes,hanja_placeholder,1,河間府,하간부,행정 지명(치소)
+feature:cac4313e24e1,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_007,한국어이름,name_en,천주부,泉州府,泉州府,yes,hanja_placeholder,1,泉州府,천주부,행정 지명(치소)
+feature:928e9ec6a97b,core,place_name,hg_points,hg_points.geojson,HG_003,한국어이름,name_en,법해사,法海寺,法海寺,yes,hanja_placeholder,1,法海寺,법해사,인문 지명
+feature:355642a72ef8,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_062,한국어이름,name_en,태안부,泰安府,泰安府,yes,hanja_placeholder,1,泰安府,태안부,행정 지명(치소)
+feature:0aecd769ea9f,core,place_name,wg_points,wg_points.geojson,WS_002,한국어이름,name_en,동정호,洞庭湖,洞庭湖,yes,hanja_placeholder,1,洞庭湖,동정호,수계 지명
+feature:8f7519ebe4df,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_018,한국어이름,name_en,포성현,浦城縣,浦城縣,yes,hanja_placeholder,1,浦城縣,포성현,행정 지명(치소)
+feature:4bdcfd2ec473,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_075,한국어이름,name_en,탁주,涿州,涿州,yes,hanja_placeholder,1,涿州,탁주,행정 지명(치소)
+feature:f8c76daaca20,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_052,한국어이름,name_en,회안부,淮安府,淮安府,yes,hanja_placeholder,1,淮安府,회안부,행정 지명(치소)
+feature:476834476943,core,place_name,wg_points,wg_points.geojson,WS_006,한국어이름,name_en,청강부,淸江阜,淸江阜,yes,hanja_placeholder,1,淸江阜,청강부,수계 지명
+feature:caf9bd310bdc,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_044,한국어이름,name_en,호구현,湖口縣,湖口縣,yes,hanja_placeholder,1,湖口縣,호구현,행정 지명(치소)
+feature:553fb36dd3b0,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_063,한국어이름,name_en,제남부,濟南府,濟南府,yes,hanja_placeholder,1,濟南府,제남부,행정 지명(치소)
+feature:3fcd3582b459,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_064,한국어이름,name_en,제하현,濟河縣,濟河縣,yes,hanja_placeholder,1,濟河縣,제하현,행정 지명(치소)
+feature:51feb79a13c5,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_030,한국어이름,name_en,무석현,無錫縣,無錫縣,yes,hanja_placeholder,1,無錫縣,무석현,행정 지명(치소)
+feature:9490859b655d,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_070,한국어이름,name_en,헌현,獻縣,獻縣,yes,hanja_placeholder,1,獻縣,헌현,행정 지명(치소)
+feature:30d934869b64,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_055,한국어이름,name_en,왕가영진,王家營鎭,王家營鎭,yes,hanja_placeholder,1,王家營鎭,왕가영진,특수행정 지명
+feature:1ab9705434d4,core,place_name,wg_points,wg_points.geojson,WS_005,한국어이름,name_en,과주,瓜洲,瓜洲,yes,hanja_placeholder,1,瓜洲,과주,수계 지명
+feature:1053d3db8167,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_028,한국어이름,name_en,석문현,石門縣,石門縣,yes,hanja_placeholder,1,石門縣,석문현,행정 지명(치소)
+feature:a6a24a2b61e1,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_012,한국어이름,name_en,복건성,福建省,福建省,yes,hanja_placeholder,1,福建省,복건성,행정 지명(치소)
+feature:386db4e322e5,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_010,한국어이름,name_en,복청현,福淸縣,福淸縣,yes,hanja_placeholder,1,福淸縣,복청현,행정 지명(치소)
+feature:285fe982a0c0,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_065,한국어이름,name_en,우성현,禹城縣,禹城縣,yes,hanja_placeholder,1,禹城縣,우성현,행정 지명(치소)
+feature:362333dd59f5,core,place_name,tg_points,tg_points.geojson,TS_018,한국어이름,name_en,양류점,羊流店,羊流店,yes,hanja_placeholder,1,羊流店,양류점,교통 지명
+feature:b87e3914d9f6,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_004,한국어이름,name_en,대만부,臺灣府,臺灣府,yes,hanja_placeholder,1,臺灣府,대만부,행정 지명(치소)
+feature:ef92f71d637a,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_009,한국어이름,name_en,흥화부,興化府,興化府,yes,hanja_placeholder,1,興化府,흥화부,행정 지명(치소)
+feature:1ef589adcf29,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_076,한국어이름,name_en,양향현,良鄕縣,良鄕縣,yes,hanja_placeholder,1,良鄕縣,양향현,행정 지명(치소)
+feature:7b9e435ede1d,core,place_name,tg_points,tg_points.geojson,TS_008,한국어이름,name_en,엽방순사,葉坊巡司,葉坊巡司,yes,hanja_placeholder,1,葉坊巡司,엽방순사,교통 지명
+feature:71c6c32b8181,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_060,한국어이름,name_en,몽음현,蒙陰縣,蒙陰縣,yes,hanja_placeholder,1,蒙陰縣,몽음현,행정 지명(치소)
+feature:dc4af4b283d2,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_034,한국어이름,name_en,무호현,蕪湖縣,蕪湖縣,yes,hanja_placeholder,1,蕪湖縣,무호현,행정 지명(치소)
+feature:fe671a0118d9,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_046,한국어이름,name_en,소주부,蘇州府,蘇州府,yes,hanja_placeholder,1,蘇州府,소주부,행정 지명(치소)
+feature:bab609025e3a,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_059,한국어이름,name_en,난산현,蘭山縣,蘭山縣,yes,hanja_placeholder,1,蘭山縣,난산현,행정 지명(치소)
+feature:d2fd9a032e33,core,place_name,hg_points,hg_points.geojson,HG_008,한국어이름,name_en,호구사,虎邱寺,虎邱寺,yes,hanja_placeholder,1,虎邱寺,호구사,인문 지명
+feature:04d00a29fa1a,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_056,한국어이름,name_en,중흥집,衆興集,衆興集,yes,hanja_placeholder,1,衆興集,중흥집,특수행정 지명
+feature:730aaa0c3057,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_020,한국어이름,name_en,구주부,衢州府,衢州府,yes,hanja_placeholder,1,衢州府,구주부,행정 지명(치소)
+feature:88099f85457b,core,place_name,mg_points,mg_points.geojson,MS_001,한국어이름,name_en,서양령,西陽嶺,西陽嶺,yes,hanja_placeholder,1,西陽嶺,서양령,산계 지명
+feature:c19f64d76898,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_058,한국어이름,name_en,담성현,郯城縣,郯城縣,yes,hanja_placeholder,1,郯城縣,담성현,행정 지명(치소)
+feature:fe0dd2847de9,core,place_name,hg_points,hg_points.geojson,HG_010,한국어이름,name_en,금산사,金山寺,金山寺,yes,hanja_placeholder,1,金山寺,금산사,인문 지명
+feature:6c3caf29b6ab,core,place_name,hg_points,hg_points.geojson,HG_005,한국어이름,name_en,조대,釣臺,釣臺,yes,hanja_placeholder,1,釣臺,조대,인문 지명
+feature:7be5fffb1ea5,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_035,한국어이름,name_en,동릉현,銅陵縣,銅陵縣,yes,hanja_placeholder,1,銅陵縣,동릉현,행정 지명(치소)
+feature:a1f2a889f593,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_033,한국어이름,name_en,진강부,鎭江府,鎭江府,yes,hanja_placeholder,1,鎭江府,진강부,행정 지명(치소)
+feature:d33e7d566cca,core,place_name,tg_points,tg_points.geojson,TS_019,한국어이름,name_en,장성역,長城驛,長城驛,yes,hanja_placeholder,1,長城驛,장성역,교통 지명
+feature:1935af411deb,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_013,한국어이름,name_en,민청현,閩淸縣,閩淸縣,yes,hanja_placeholder,1,閩淸縣,민청현,행정 지명(치소)
+feature:3304ddf33f65,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_068,한국어이름,name_en,부성현,阜城縣,阜城縣,yes,hanja_placeholder,1,阜城縣,부성현,행정 지명(치소)
+feature:717f6c15cb6d,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_073,한국어이름,name_en,웅현,雄縣,雄縣,yes,hanja_placeholder,1,雄縣,웅현,행정 지명(치소)
+feature:50eafbaba8a3,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_006,한국어이름,name_en,마항청,馬巷廳,馬巷廳,yes,hanja_placeholder,1,馬巷廳,마항청,특수행정 지명
+feature:8ab57f747b98,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JD_050,한국어이름,name_en,고우주,高郵州,高郵州,yes,hanja_placeholder,1,高郵州,고우주,행정 지명(치소)
+feature:71f11fa702b6,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_040,한국어이름,name_en,황주부,黃州府,黃州府,yes,hanja_placeholder,1,黃州府,황주부,행정 지명(치소)
+feature:bdfbdc260e1d,core,place_name,tg_points,tg_points.geojson,TS_002,한국어이름,name_en,황진교,黃津橋,黃津橋,yes,hanja_placeholder,1,黃津橋,황진교,교통 지명
+feature:4ba6c9802d39,core,place_name,tg_points,tg_points.geojson,TS_003,한국어이름,name_en,황전역,黃田驛,黃田驛,yes,hanja_placeholder,1,黃田驛,황전역,교통 지명
+feature:6473b057e304,core,place_name,ad_ja_points,ad_ja_points.geojson,AD_JA_021,한국어이름,name_en,용유현,龍游縣,龍游縣,yes,hanja_placeholder,1,龍游縣,용유현,행정 지명(치소)
+feature:e58f2eaded68,core,place_name,tg_points,tg_points.geojson,TS_001,한국어이름,name_en,낙양교,洛陽橋,洛陽橋,yes,hanja_placeholder,1,洛陽橋,낙양교,교통 지명
+feature:f7c45ac38840,optional,misc_note,hg_points,hg_points.geojson,HG_010,_blank_1,misc_note_en,"??? 금산사가 각주 86에 있는 양주 금산사인지? 현재 금산사의 지명이 남아있는 곳으로 양주금산사로 불릴법한 곳은 진강시에 있는 금산풍경구로, 청대 부경계도에서 보면 진강부에 속해있기는 하지만 하천을 경계로 양주부와 만나는 곳에 위치. 지도에도 그 위치로 비정",,,yes,manual_required,1,金山寺,금산사,인문 지명
+feature:00a8dd184e9d,optional,misc_note,mg_points,mg_points.geojson,MS_001,_blank_1,misc_note_en,현재 잔존 지명,,,yes,manual_required,1,西陽嶺,서양령,산계 지명
+feature:fc476cd1b605,optional,misc_note,mg_points,mg_points.geojson,MS_002,_blank_1,misc_note_en,현재 잔존 지명,,,yes,manual_required,1,仙霞嶺,선하령,산계 지명
+feature:5987347708a8,optional,misc_note,wg_points,wg_points.geojson,WS_005,_blank_1,misc_note_en,본문에는 없는거 아닌가?,,,yes,manual_required,1,瓜洲,과주,수계 지명
+feature:bc9047861104,core,note,route_points,route_points.geojson,9,NOTE,note_en,"『표해록』과 『서이방익사』에 따르면 ""북관 대선사에서 영거관이 악양루를 들를 것을 제안(남호현, 2021a, 121~122쪽)",,,yes,manual_required,1,,동정호 방문 제안,분기
+feature:3eca0a0a3275,core,note,tg_points,tg_points.geojson,TS_006,비고,note_en,"CHGIS 명대 역참 데이터와 『중국역사지도집』 8, 42~43쪽에 나타나는 '大橫驛'을 지칭하는 것으로 추정.",,,yes,manual_required,1,大王館,대왕관,교통 지명
+feature:cfaf392d0438,core,note,tg_points,tg_points.geojson,TS_002,비고,note_en,"위치를 확인할 수 있는 문헌 기록은 존재하지 않음. 다만 복건성 서문으로부터 40여 리 떨어진 곳에 위치하고, 이 위치부터 배를 타고 이동했다는 『표해록』 및 「서이방익사」의 기록을 참고하여 위치 비정.",,,yes,manual_required,1,黃津橋,황진교,교통 지명
+value:7e24fda8809a,context,present_region,ad_ja_points,ad_ja_points.geojson,AD_JD_067; AD_JD_068; AD_JD_069; AD_JD_070; AD_JD_072; AD_JD_073; AD_JD_074; AD_JD_075,현재 위치 광역 단위,present_region_en,중국_허베이성,,China_Hebei Province,yes,manual_required,8,景州,경주,행정 지명(치소)
+value:123e31950674,context,present_region,ad_ja_points,ad_ja_points.geojson,AD_JA_040; AD_JA_041; AD_JA_042,현재 위치 광역 단위,present_region_en,중국_후베이성,,China_Hubei Province,yes,manual_required,3,黃州府,황주부,행정 지명(치소)
+feature:90de19332184,optional,source_note,mg_points,mg_points.geojson,MS_001,출처(1차사료),primary_source_note_en,"「浦城山川城池之圖」, 『光緖續修浦城縣志』, 1~2쪽.",,,yes,manual_required,1,西陽嶺,서양령,산계 지명
+feature:cb5984900c00,core,research_note,ad_ja_points,ad_ja_points.geojson,AD_JA_023,비고(논문 등 연구 참고 사항),research_note_en,건덕현 치소와 동일,,,yes,manual_required,1,嚴州府,엄주부,행정 지명(치소)
+feature:e6f38b8ef485,core,research_note,ad_ja_points,ad_ja_points.geojson,AD_JA_005,비고(논문 등 연구 참고 사항),research_note_en,"남호현, 2021a, 106~108/東安은 同安의 오기로 추정",,,yes,manual_required,1,同安縣,동안현,행정 지명(치소)
+feature:9b20ba39bd6f,core,research_note,ad_ja_points,ad_ja_points.geojson,AD_JA_001,비고(논문 등 연구 참고 사항),research_note_en,"남호현, 2021a, 97~100",,,yes,manual_required,1,東衛,동위,특수행정 지명
+feature:f015ecd28480,core,research_note,ad_ja_points,ad_ja_points.geojson,AD_JA_006,비고(논문 등 연구 참고 사항),research_note_en,"남호현, 2021b, 141~143",,,yes,manual_required,1,馬巷廳,마항청,특수행정 지명
+feature:e28b7bbb4e60,core,research_note,ad_ja_points,ad_ja_points.geojson,AD_JA_012,비고(논문 등 연구 참고 사항),research_note_en,민현 치소와 동일,,,yes,manual_required,1,福建省,복건성,행정 지명(치소)
+feature:ad7de087c7f4,core,research_note,ad_ja_points,ad_ja_points.geojson,AD_JA_020,비고(논문 등 연구 참고 사항),research_note_en,서안현 치소와 동일,,,yes,manual_required,1,衢州府,구주부,행정 지명(치소)
+feature:81ceff582b1c,core,research_note,ad_ja_points,ad_ja_points.geojson,AD_JD_051,비고(논문 등 연구 참고 사항),research_note_en,서이방익사 보응현 위치 오류,,,yes,manual_required,1,寶應縣,보응현,행정 지명(치소)
+feature:45ae86be3c5d,core,research_note,ad_ja_points,ad_ja_points.geojson,AD_JA_022,비고(논문 등 연구 참고 사항),research_note_en,엄주부 치소와 동일,,,yes,manual_required,1,建德縣,건덕현,행정 지명(치소)
+feature:3b4c4f58c794,core,research_note,ad_ja_points,ad_ja_points.geojson,AD_JD_064,비고(논문 등 연구 참고 사항),research_note_en,제남-제하 순서 다름,,,yes,manual_required,1,濟河縣,제하현,행정 지명(치소)
+feature:2fdf5204b180,core,research_note,ad_ja_points,ad_ja_points.geojson,AD_JD_056,비고(논문 등 연구 참고 사항),research_note_en,󰡔승사록󰡕 1818년 6월 25일,,,yes,manual_required,1,衆興集,중흥집,특수행정 지명
+feature:ba23747df482,optional,source_note,hg_points,hg_points.geojson,HG_010,출처(논문),scholarly_source_note_en,금산사 소속 확인,,,yes,manual_required,1,金山寺,금산사,인문 지명
+feature:d20c2dc5c277,optional,source_note,hg_points,hg_points.geojson,HG_002,출처(논문),scholarly_source_note_en,"남호현, 2021a, 108~113",,,yes,manual_required,1,同安縣學,동안현학,인문 지명
+feature:88c7d2a81e17,optional,source_note,hg_points,hg_points.geojson,HG_003,출처(논문),scholarly_source_note_en,법해사 내 나산당,,,yes,manual_required,1,法海寺,법해사,인문 지명
+feature:a6c3cc6a626d,optional,source_note,hg_points,hg_points.geojson,HG_005,출처(논문),scholarly_source_note_en,󰡔표ᄒᆡ록󰡕은 건덕현으로 소개,,,yes,manual_required,1,釣臺,조대,인문 지명
+feature:77da19f7645f,optional,source_note,mg_points,mg_points.geojson,MS_001,출처(논문),scholarly_source_note_en,"권무일, 2020, 179쪽",,,yes,manual_required,1,西陽嶺,서양령,산계 지명
+feature:aec5e830aeb5,optional,source_note,mg_points,mg_points.geojson,MS_003,출처(논문),scholarly_source_note_en,"남호현, 2021a, 120쪽",,,yes,manual_required,1,梅嶺,매령,산계 지명
+feature:7cfe9314a703,optional,source_note,wg_points,wg_points.geojson,WS_005,출처(논문),scholarly_source_note_en,역주,,,yes,manual_required,1,瓜洲,과주,수계 지명
+feature:5e227ec33980,optional,source_note,wg_points,wg_points.geojson,WS_001,출처(논문),scholarly_source_note_en,󰡔周行備覽󰡕 / 호구현 건너편,,,yes,manual_required,1,八里江,팔리강,수계 지명

@@ -22,6 +22,8 @@
     ilseongnok: "『일성록』"
   };
 
+  var APP_VERSION = "20260724-5";
+
   var I18N = {
     ko: {
       appTitle: "표해노정도 뷰어",
@@ -44,8 +46,12 @@
       route: "노정",
       place: "지명",
       context: "비교 자료",
+      boundary: "경계",
+      hydrography: "수문 도형",
       all: "전체",
       sublayers: "하위 레이어",
+      showSidebar: "패널 열기",
+      hideSidebar: "패널 닫기",
       routeCertain: "확정 구간",
       routeUncertain: "추정 구간",
       density0: "없음",
@@ -63,6 +69,9 @@
       mg_points: "산계 지명",
       wg_points: "수계 지명",
       county_points: "시계열 현급 행정 지점",
+      chgis_1820_province_boundaries: "1820 성 경계",
+      chgis_1796_prefecture_boundaries: "1796 부급 경계",
+      chgis_1820_lakes: "호수",
       chgis_dem_hillshade: "CHGIS DEM + Hillshade",
       osm: "OpenStreetMap",
       overview: "전체 노정",
@@ -74,7 +83,7 @@
       routeDesc: "복원된 이동 선분과 주요 지점만 표시합니다.",
       transportDesc: "노정, 교통 지명, 운하를 함께 표시합니다.",
       placeContextDesc: "행정, 인문, 산계, 수계, 교통 지명을 함께 표시합니다.",
-      adminContextDesc: "시계열 현급 행정 지점을 포함해 지명 위치를 검토합니다."
+      adminContextDesc: "시계열 현급 행정 지점과 행정 경계를 포함해 지명 위치를 검토합니다."
     },
     en: {
       appTitle: "Drift Route Map Viewer",
@@ -97,8 +106,12 @@
       route: "Route",
       place: "Place",
       context: "Context",
+      boundary: "Boundary",
+      hydrography: "Hydrographic Features",
       all: "All",
       sublayers: "Sublayers",
+      showSidebar: "Show panel",
+      hideSidebar: "Hide panel",
       routeCertain: "Confirmed Segments",
       routeUncertain: "Inferred Segments",
       density0: "None",
@@ -116,6 +129,9 @@
       mg_points: "Mountain System",
       wg_points: "Water System",
       county_points: "Time-series County Seats",
+      chgis_1820_province_boundaries: "1820 Province Boundaries",
+      chgis_1796_prefecture_boundaries: "1796 Prefecture Boundaries",
+      chgis_1820_lakes: "Lakes",
       chgis_dem_hillshade: "CHGIS DEM + Hillshade",
       osm: "OpenStreetMap",
       overview: "Overview",
@@ -127,7 +143,7 @@
       routeDesc: "Show only the reconstructed route and key stops.",
       transportDesc: "Compare the route with transport places and the Grand Canal.",
       placeContextDesc: "Show administrative, human, mountain, water, and transport places.",
-      adminContextDesc: "Add time-series county seats for administrative context."
+      adminContextDesc: "Add time-series county seats and administrative boundaries for context."
     }
   };
 
@@ -171,6 +187,11 @@
       "PRES_LOC": "Present Location",
       "BEG_YR": "Start Year",
       "END_YR": "End Year",
+      "TYPE_CH": "Chinese Type",
+      "TYPE_PY": "Romanized Type",
+      "LEV1_CH": "Province",
+      "DYN_CH": "Dynasty",
+      "_filter_year": "Filter Year",
       "_source_file": "Source File",
       "_source_crs": "Source CRS"
     },
@@ -248,9 +269,13 @@
     layerFeatures: new Map(),
     featureLayers: new Map(),
     featureIndex: [],
+    translationsByFeature: new Map(),
+    translationsByValue: new Map(),
     activeScene: null,
     lastSearch: "",
     labelDensity: 3,
+    labelBuckets: new Map(),
+    sidebarCollapsed: false,
     arrowLayers: new Map(),
     sidePopup: null,
     sidePopupLatLng: null
@@ -258,6 +283,72 @@
 
   function qs(id) {
     return document.getElementById(id);
+  }
+
+  function assetUrl(path) {
+    return path + (path.indexOf("?") === -1 ? "?" : "&") + "v=" + APP_VERSION;
+  }
+
+  function freshAssetUrl(path) {
+    return assetUrl(path) + "&t=" + Date.now();
+  }
+
+  function mapKey(parts) {
+    return parts.join("\u241f");
+  }
+
+  function parseCsv(text) {
+    var rows = [];
+    var row = [];
+    var value = "";
+    var inQuotes = false;
+
+    for (var i = 0; i < text.length; i += 1) {
+      var ch = text[i];
+      if (inQuotes) {
+        if (ch === "\"") {
+          if (text[i + 1] === "\"") {
+            value += "\"";
+            i += 1;
+          } else {
+            inQuotes = false;
+          }
+        } else {
+          value += ch;
+        }
+      } else if (ch === "\"") {
+        inQuotes = true;
+      } else if (ch === ",") {
+        row.push(value);
+        value = "";
+      } else if (ch === "\n") {
+        row.push(value.replace(/\r$/, ""));
+        rows.push(row);
+        row = [];
+        value = "";
+      } else {
+        value += ch;
+      }
+    }
+
+    if (value.length || row.length) {
+      row.push(value.replace(/\r$/, ""));
+      rows.push(row);
+    }
+
+    if (!rows.length) return [];
+    var headers = rows.shift();
+    return rows.filter(function (items) {
+      return items.some(function (item) {
+        return item !== "";
+      });
+    }).map(function (items) {
+      var record = {};
+      headers.forEach(function (header, index) {
+        record[header] = items[index] || "";
+      });
+      return record;
+    });
   }
 
   function t(key) {
@@ -281,6 +372,21 @@
     return def.id.indexOf("lines") !== -1 || def.id === "route_lines";
   }
 
+  function isBoundaryLayer(def) {
+    return def.category === "boundary" || def.id.indexOf("boundaries") !== -1;
+  }
+
+  function createMapPane(name, zIndex) {
+    if (!state.map || !name) return;
+    if (!state.map.getPane(name)) state.map.createPane(name);
+    state.map.getPane(name).style.zIndex = zIndex;
+  }
+
+  function safePaneName(name) {
+    if (!state.map || !name || !state.map.getPane(name)) return undefined;
+    return name;
+  }
+
   function layerTitle(def) {
     return t(def.id) || def.title;
   }
@@ -300,22 +406,53 @@
     return key.replace(/^_/, "");
   }
 
-  function labelText(props) {
-    var keys = [FIELD.hanja, "NM_CHN", "NAME_FT", "NAME_CH", FIELD.korean, "NM_KOR", "TYPE_NAME", "NAME_PY"];
+  function sourceFeatureId(props) {
+    var keys = [FIELD.id, "SEQ", "SYS_ID", "KEY_ID", "NOTE_ID"];
     for (var i = 0; i < keys.length; i += 1) {
-      if (props && props[keys[i]]) return props[keys[i]];
+      if (props && props[keys[i]]) return String(props[keys[i]]).trim();
+    }
+    return "";
+  }
+
+  function translationFor(props, field, value) {
+    if (state.lang !== "en") return value;
+    var original = String(value || "").trim();
+    if (!original) return value;
+
+    var fid = sourceFeatureId(props);
+    var translated = fid ? state.translationsByFeature.get(mapKey([fid, field, original])) : "";
+    if (!translated) translated = state.translationsByValue.get(mapKey([field, original]));
+    return translated || value;
+  }
+
+  function displayValue(props, field) {
+    return translationFor(props, field, props ? props[field] : "");
+  }
+
+  function labelText(props, translated) {
+    var hanjaKeys = [FIELD.hanja, "NM_CHN", "NAME_FT", "NAME_CH"];
+    var fallbackKeys = [FIELD.korean, "NM_KOR", "TYPE_NAME", "NAME_PY"];
+    var i;
+    for (i = 0; i < hanjaKeys.length; i += 1) {
+      if (props && props[hanjaKeys[i]]) return props[hanjaKeys[i]];
+    }
+    for (i = 0; i < fallbackKeys.length; i += 1) {
+      if (props && props[fallbackKeys[i]]) return translated ? displayValue(props, fallbackKeys[i]) : props[fallbackKeys[i]];
     }
     return "";
   }
 
   function primaryLabel(props) {
-    return labelText(props) || "Unnamed";
+    return labelText(props, true) || "Unnamed";
   }
 
   function secondaryLabel(props) {
     var parts = [];
     [FIELD.korean, FIELD.major, FIELD.minor, "TYPE_MEMO", "TRANS_MEMO", "NOTE", "PRES_LOC"].forEach(function (key) {
-      if (props && props[key] && parts.indexOf(props[key]) === -1) parts.push(props[key]);
+      if (props && props[key]) {
+        var value = displayValue(props, key);
+        if (value && parts.indexOf(value) === -1) parts.push(value);
+      }
     });
     return parts.join(" · ");
   }
@@ -337,8 +474,9 @@
       if (value === null || value === undefined || value === "") return;
       if (String(key).indexOf("_blank_") === 0 || key === "_feature_key") return;
       used.add(key);
+      var display = displayValue(props, key);
       rows.push(
-        "<tr><th>" + escapeHtml(keyLabel(key)) + "</th><td>" + escapeHtml(value) + "</td></tr>"
+        "<tr><th>" + escapeHtml(keyLabel(key)) + "</th><td>" + escapeHtml(display) + "</td></tr>"
       );
     }
 
@@ -465,6 +603,7 @@
 
   function isUncertainFeature(def, props, tokens) {
     if (def.id === "route_lines" && Number(props.TYPE) === 3) return true;
+    if (def.id === "route_lines" && Number(props.TYPE) === 4) return true;
     var values = [
       props.NOTE,
       props.TYPE_MEMO,
@@ -474,7 +613,7 @@
       props["비고"],
       props["비고(논문 등 연구 참고 사항)"]
     ].join(" ");
-    if (/추정|미상|불명|未詳|疑|推定|approx|uncertain/i.test(values)) return true;
+    if (/추정|미상|불명|未詳|疑|推定|박지원\s*고증|approx|uncertain/i.test(values)) return true;
     if (def.id === "ad_ja_points" && tokens.indexOf("minor:admin-lv3") !== -1 && tokens.indexOf("minor:military") !== -1) return true;
     return false;
   }
@@ -521,12 +660,20 @@
       if (/도보|육로/.test(memo)) color = "#b91c1c";
       if (/추정|미상/.test(memo)) dashArray = "7 6";
     }
-    return {
+    var style = {
       color: color,
       weight: (def.style && def.style.weight) || 3,
       opacity: (def.style && def.style.opacity) || 0.85,
-      dashArray: dashArray
+      dashArray: (def.style && def.style.dashArray) || dashArray,
+      fillColor: (def.style && def.style.fillColor) || color,
+      fillOpacity: def.style && def.style.fillOpacity !== undefined ? def.style.fillOpacity : 0.18
     };
+    if (isBoundaryLayer(def)) {
+      style.fill = false;
+      style.fillOpacity = (def.style && def.style.fillOpacity) || 0;
+      style.interactive = true;
+    }
+    return style;
   }
 
   function featureCenter(feature) {
@@ -535,6 +682,8 @@
     if (geom.type === "Point") {
       return L.latLng(geom.coordinates[1], geom.coordinates[0]);
     }
+    var bounds = L.geoJSON(feature).getBounds();
+    if (bounds && bounds.isValid()) return bounds.getCenter();
     return null;
   }
 
@@ -546,19 +695,48 @@
     var values = Object.keys(props).map(function (propKey) {
       return props[propKey] === null || props[propKey] === undefined ? "" : String(props[propKey]);
     });
+    var translatedValues = Object.keys(props).map(function (propKey) {
+      var value = props[propKey];
+      return value === null || value === undefined ? "" : String(translationFor(props, propKey, value));
+    });
     state.featureIndex.push({
       key: key,
       layerId: def.id,
       layerTitle: layerTitle(def),
       title: primaryLabel(props),
       meta: secondaryLabel(props),
-      text: values.join(" ").toLowerCase(),
+      props: props,
+      text: (values.join(" ") + " " + translatedValues.join(" ")).toLowerCase(),
       center: featureCenter(feature)
     });
   }
 
   function shouldBindPermanentLabel(def) {
     return ["ad_ja_points", "hg_points", "mg_points", "tg_points", "wg_points", "route_points"].indexOf(def.id) !== -1;
+  }
+
+  function labelPlacement(feature) {
+    var latlng = featureCenter(feature);
+    if (!latlng) return { direction: "right", offset: [10, 0] };
+    var bucketSize = 0.05;
+    var key = Math.round(latlng.lat / bucketSize) + ":" + Math.round(latlng.lng / bucketSize);
+    var slot = state.labelBuckets.get(key) || 0;
+    state.labelBuckets.set(key, slot + 1);
+    var placements = [
+      { direction: "right", offset: [12, 0] },
+      { direction: "left", offset: [-12, 0] },
+      { direction: "top", offset: [0, -10] },
+      { direction: "bottom", offset: [0, 10] },
+      { direction: "right", offset: [12, -24] },
+      { direction: "right", offset: [12, 24] },
+      { direction: "left", offset: [-12, -24] },
+      { direction: "left", offset: [-12, 24] },
+      { direction: "top", offset: [28, -10] },
+      { direction: "bottom", offset: [-28, 10] },
+      { direction: "right", offset: [12, -48] },
+      { direction: "left", offset: [-12, 48] }
+    ];
+    return placements[slot % placements.length];
   }
 
   function labelMinZoom(item) {
@@ -599,6 +777,8 @@
   function updateTooltipVisibility(item) {
     var tooltip = item.layer.getTooltip && item.layer.getTooltip();
     if (!tooltip) return;
+    var label = labelText(item.feature.properties || {}, true);
+    if (label && tooltip.setContent) tooltip.setContent(label);
     var el = tooltip.getElement && tooltip.getElement();
     if (el) el.classList.toggle("label-hidden", !shouldShowLabel(item));
   }
@@ -659,9 +839,33 @@
     state.sidePopupLatLng = null;
   }
 
+  function popupLatLngForLayer(layer, feature, event) {
+    if (event && event.latlng) return event.latlng;
+    if (layer.getLatLng) return layer.getLatLng();
+    if (layer.getBounds) return layer.getBounds().getCenter();
+    return featureCenter(feature);
+  }
+
+  function openFeaturePopup(layer, feature, event) {
+    var props = (feature && feature.properties) || layer._featureProps || {};
+    openSidePopup(popupLatLngForLayer(layer, feature, event), popupTable(props));
+  }
+
+  function bindTooltipPopupEvents(layer, feature) {
+    var tooltip = layer.getTooltip && layer.getTooltip();
+    var element = tooltip && tooltip.getElement && tooltip.getElement();
+    if (!element || element._sidePopupBound) return;
+    element._sidePopupBound = true;
+    element.addEventListener("click", function (event) {
+      event.stopPropagation();
+      openFeaturePopup(layer, feature);
+    });
+  }
+
   function createLayer(def, geojson) {
     var group = L.layerGroup();
     var items = [];
+    var pane = safePaneName(def.pane);
     state.layerFeatures.set(def.id, items);
 
     geojson.features.forEach(function (feature, index) {
@@ -670,7 +874,7 @@
       feature.properties._feature_key = def.id + ":" + index;
       indexFeature(feature, def, index);
 
-      var featureLayer = L.geoJSON(feature, {
+      var layerOptions = {
         style: function (feat) {
           var style = lineStyle(def, feat.properties || {});
           if (isUncertainFeature(def, feat.properties || {}, [])) {
@@ -681,31 +885,41 @@
         },
         pointToLayer: function (feat, latlng) {
           if (def.id === "county_points") {
-            return L.circleMarker(latlng, {
+            var circleOptions = {
               radius: 3,
               color: "#ffffff",
               weight: 0.5,
               fillColor: colorOf(def),
               fillOpacity: 0.55
-            });
+            };
+            if (pane) circleOptions.pane = pane;
+            return L.circleMarker(latlng, circleOptions);
           }
-          return L.marker(latlng, { icon: markerIcon(def, feat.properties || {}, tokens) });
+          var markerOptions = { icon: markerIcon(def, feat.properties || {}, tokens) };
+          if (pane) markerOptions.pane = pane;
+          return L.marker(latlng, markerOptions);
         },
         onEachFeature: function (feat, layer) {
           var props = feat.properties || {};
           state.featureLayers.set(props._feature_key, layer);
-          layer._sidePopupHtml = popupTable(props);
+          layer._featureProps = props;
           layer.on("click", function (event) {
             if (event.originalEvent) L.DomEvent.stopPropagation(event.originalEvent);
-            openSidePopup(event.latlng || (layer.getLatLng && layer.getLatLng()) || featureCenter(feat), layer._sidePopupHtml);
+            openFeaturePopup(layer, feat, event);
           });
-          var label = labelText(props);
+          var label = labelText(props, true);
           if (label && shouldBindPermanentLabel(def)) {
+            var placement = labelPlacement(feat);
             layer.bindTooltip(label, {
               permanent: true,
-              direction: "right",
-              offset: [10, 0],
+              direction: placement.direction,
+              offset: placement.offset,
               className: "hanja-label"
+            });
+            layer.on("add tooltipopen", function () {
+              window.setTimeout(function () {
+                bindTooltipPopupEvents(layer, feat);
+              }, 0);
             });
           }
           if (def.id === "route_lines" && layer.setText) {
@@ -716,7 +930,10 @@
             });
           }
         }
-      });
+      };
+      if (pane) layerOptions.pane = pane;
+
+      var featureLayer = L.geoJSON(feature, layerOptions);
 
       var child = featureLayer.getLayers()[0] || featureLayer;
       var item = {
@@ -967,6 +1184,22 @@
     }
   }
 
+  function fitScene(scene) {
+    if (scene.fit && scene.fit.layer_id) {
+      var focused = L.featureGroup();
+      var items = state.layerFeatures.get(scene.fit.layer_id) || [];
+      items.forEach(function (item) {
+        if (scene.fit.token && item.tokens.indexOf(scene.fit.token) === -1) return;
+        focused.addLayer(item.layer);
+      });
+      if (focused.getLayers().length) {
+        state.map.fitBounds(focused.getBounds().pad(0.12));
+        return;
+      }
+    }
+    fitVisibleLayers();
+  }
+
   function createBasemap(def) {
     if (def.type === "tile") {
       return L.tileLayer(def.url, {
@@ -976,11 +1209,13 @@
       });
     }
     if (def.type === "image") {
-      var imageLayer = L.imageOverlay(def.path, def.bounds, {
-        pane: "basemapImagePane",
+      var imageOptions = {
         opacity: def.opacity || 1,
         interactive: false
-      });
+      };
+      var pane = safePaneName("basemapImagePane");
+      if (pane) imageOptions.pane = pane;
+      var imageLayer = L.imageOverlay(def.path, def.bounds, imageOptions);
       imageLayer.getAttribution = function () {
         return def.attribution || "";
       };
@@ -1061,7 +1296,7 @@
     });
     var textKeys = sceneText[scene.id] || {};
     updateStatus((t(textKeys.title) || scene.title) + " · " + (t(textKeys.desc) || scene.description));
-    fitVisibleLayers();
+    fitScene(scene);
   }
 
   function renderFilterCheckbox(def, key, counts) {
@@ -1099,11 +1334,31 @@
     return row;
   }
 
-  function renderLayerList() {
-    var wrap = qs("layer-list");
-    wrap.innerHTML = "";
+  function renderRoutePointLinks() {
+    var children = document.createElement("div");
+    children.className = "layer-children route-point-list";
+    var items = (state.layerFeatures.get("route_points") || []).slice().sort(function (a, b) {
+      return Number(a.feature.properties.SEQ || 0) - Number(b.feature.properties.SEQ || 0);
+    });
+    items.forEach(function (item) {
+      var props = item.feature.properties || {};
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "route-point-link";
+      button.textContent = (props.SEQ ? props.SEQ + ". " : "") + primaryLabel(props);
+      button.addEventListener("click", function () {
+        var center = featureCenter(item.feature);
+        if (!center) return;
+        setLayerVisible("route_points", true);
+        state.map.setView(center, state.map.getZoom(), { animate: true });
+        updateStatus(primaryLabel(props));
+      });
+      children.appendChild(button);
+    });
+    return children;
+  }
 
-    state.manifest.layers.forEach(function (def) {
+  function renderLayerBlock(def) {
       var block = document.createElement("div");
       block.className = "layer-block";
       var header = document.createElement("div");
@@ -1121,7 +1376,7 @@
       state.parentCheckboxes.set(def.id, checkbox);
 
       var swatch = document.createElement("span");
-      swatch.className = "layer-swatch " + (isLineLayer(def) ? "line" : "point");
+      swatch.className = "layer-swatch " + (isLineLayer(def) || isBoundaryLayer(def) ? "line" : "point");
       swatch.style.backgroundColor = colorOf(def);
 
       var title = document.createElement("span");
@@ -1146,23 +1401,27 @@
       block.appendChild(header);
 
       var groups = state.filterDefs.get(def.id) || [];
-      if (groups.length) {
+      if (groups.length || def.id === "route_points") {
         var children = document.createElement("div");
         children.className = "layer-children";
-        var counts = filterCounts(def.id);
-        groups.forEach(function (group) {
-          var groupTitle = document.createElement("div");
-          groupTitle.className = "filter-group-title";
-          if (group.type === "certainty") {
-            groupTitle.textContent = state.lang === "en" ? "Certainty" : "확정성";
-          } else {
-            groupTitle.textContent = group.type === "major" ? (state.lang === "en" ? "Major Category" : "대분류") : (state.lang === "en" ? "Subtype" : "소분류");
-          }
-          children.appendChild(groupTitle);
-          group.items.forEach(function (key) {
-            children.appendChild(renderFilterCheckbox(def, key, counts));
+        if (groups.length) {
+          var counts = filterCounts(def.id);
+          groups.forEach(function (group) {
+            var groupTitle = document.createElement("div");
+            groupTitle.className = "filter-group-title";
+            if (group.type === "certainty") {
+              groupTitle.textContent = state.lang === "en" ? "Certainty" : "확정성";
+            } else {
+              groupTitle.textContent = group.type === "major" ? (state.lang === "en" ? "Major Category" : "대분류") : (state.lang === "en" ? "Subtype" : "소분류");
+            }
+            children.appendChild(groupTitle);
+            group.items.forEach(function (key) {
+              children.appendChild(renderFilterCheckbox(def, key, counts));
+            });
           });
-        });
+        } else {
+          children = renderRoutePointLinks();
+        }
         toggle.addEventListener("click", function () {
           var collapsed = block.classList.toggle("collapsed");
           toggle.textContent = collapsed ? "▸" : "▾";
@@ -1172,7 +1431,14 @@
         toggle.hidden = true;
       }
 
-      wrap.appendChild(block);
+      return block;
+  }
+
+  function renderLayerList() {
+    var wrap = qs("layer-list");
+    wrap.innerHTML = "";
+    state.manifest.layers.forEach(function (def) {
+      wrap.appendChild(renderLayerBlock(def));
     });
   }
 
@@ -1184,7 +1450,7 @@
       var row = document.createElement("div");
       row.className = "legend-row";
       var swatch = document.createElement("span");
-      swatch.className = "legend-swatch " + (isLineLayer(def) ? "line" : "point");
+      swatch.className = "legend-swatch " + (isLineLayer(def) || isBoundaryLayer(def) ? "line" : "point");
       swatch.style.backgroundColor = colorOf(def);
       var text = document.createElement("span");
       text.textContent = layerTitle(def) + " · " + t(def.category);
@@ -1264,11 +1530,13 @@
 
     matches.forEach(function (item) {
       var def = state.layerDefs.get(item.layerId);
+      var title = item.props ? primaryLabel(item.props) : item.title;
+      var meta = item.props ? secondaryLabel(item.props) : item.meta;
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "search-result";
-      btn.innerHTML = "<span class=\"result-title\">" + escapeHtml(item.title) + "</span>" +
-        "<span class=\"result-meta\">" + escapeHtml(layerTitle(def) + (item.meta ? " · " + item.meta : "")) + "</span>";
+      btn.innerHTML = "<span class=\"result-title\">" + escapeHtml(title) + "</span>" +
+        "<span class=\"result-meta\">" + escapeHtml(layerTitle(def) + (meta ? " · " + meta : "")) + "</span>";
       btn.addEventListener("click", function () {
         openFeature(item);
       });
@@ -1292,7 +1560,7 @@
       popupLatLng = item.center;
     }
     window.setTimeout(function () {
-      openSidePopup(popupLatLng || item.center, layer._sidePopupHtml || "");
+      openSidePopup(popupLatLng || item.center, popupTable(layer._featureProps || {}));
     }, 120);
   }
 
@@ -1304,6 +1572,25 @@
 
   function updateStatus(text) {
     qs("status-bar").textContent = text;
+  }
+
+  function setSidebarCollapsed(collapsed) {
+    state.sidebarCollapsed = !!collapsed;
+    var shell = document.querySelector(".app-shell");
+    if (shell) shell.classList.toggle("sidebar-collapsed", state.sidebarCollapsed);
+
+    var toggle = qs("sidebar-toggle");
+    if (toggle) {
+      var label = state.sidebarCollapsed ? t("showSidebar") : t("hideSidebar");
+      toggle.title = label;
+      toggle.setAttribute("aria-label", label);
+      toggle.classList.toggle("collapsed", state.sidebarCollapsed);
+    }
+
+    window.setTimeout(function () {
+      if (state.map) state.map.invalidateSize();
+      positionSidePopup(state.sidePopupLatLng);
+    }, 240);
   }
 
   function updateStaticText() {
@@ -1325,6 +1612,9 @@
     qs("section-images").textContent = t("images");
     qs("search-input").placeholder = t("searchPlaceholder");
     qs("label-density").value = String(state.labelDensity);
+    var sidebarLabel = state.sidebarCollapsed ? t("showSidebar") : t("hideSidebar");
+    qs("sidebar-toggle").title = sidebarLabel;
+    qs("sidebar-toggle").setAttribute("aria-label", sidebarLabel);
     if (!state.manifest) updateStatus(t("loading"));
   }
 
@@ -1343,11 +1633,42 @@
     search(state.lastSearch || qs("search-input").value);
   }
 
+  function registerTranslation(row) {
+    var field = (row.field || "").trim();
+    var original = (row.original_ko || "").trim();
+    if (!field || !original) return;
+
+    var translated = (row.review_en || "").trim() || original;
+    state.translationsByValue.set(mapKey([field, original]), translated);
+
+    (row.feature_ids || "").split(";").forEach(function (rawId) {
+      var fid = rawId.trim();
+      if (fid) state.translationsByFeature.set(mapKey([fid, field, original]), translated);
+    });
+  }
+
+  function loadTranslations() {
+    state.translationsByFeature.clear();
+    state.translationsByValue.clear();
+    return fetch(freshAssetUrl("data/translations/point_translation_template.csv"))
+      .then(function (response) {
+        if (!response.ok) return "";
+        return response.text();
+      })
+      .then(function (text) {
+        if (!text) return;
+        parseCsv(text).forEach(registerTranslation);
+      })
+      .catch(function (error) {
+        console.warn("Translation CSV load failed", error);
+      });
+  }
+
   function loadLayers() {
     var requests = state.manifest.layers.map(function (def) {
       state.layerDefs.set(def.id, def);
       state.parentVisible.set(def.id, !!def.default_visible);
-      return fetch(def.path)
+      return fetch(assetUrl(def.path))
         .then(function (response) {
           if (!response.ok) throw new Error(def.path + " load failed");
           return response.json();
@@ -1368,12 +1689,16 @@
     var center = state.manifest.default_center || [31.8, 119.0];
     var zoom = state.manifest.default_zoom || 5;
     state.map = L.map("map", {
-      zoomControl: true,
+      zoomControl: false,
       preferCanvas: true
     }).setView(center, zoom);
 
-    state.map.createPane("basemapImagePane");
-    state.map.getPane("basemapImagePane").style.zIndex = 180;
+    L.control.zoom({ position: "topright" }).addTo(state.map);
+
+    createMapPane("basemapImagePane", 180);
+    createMapPane("hydrographyPane", 320);
+    createMapPane("boundaryPane", 330);
+    createMapPane("keyStopPane", 670);
 
     (state.manifest.basemaps || []).forEach(function (def) {
       var basemap = createBasemap(def);
@@ -1395,6 +1720,9 @@
 
   function bindUi() {
     qs("fit-visible").addEventListener("click", fitVisibleLayers);
+    qs("sidebar-toggle").addEventListener("click", function () {
+      setSidebarCollapsed(!state.sidebarCollapsed);
+    });
     qs("label-density").addEventListener("input", function (event) {
       state.labelDensity = Number(event.target.value);
       updateDensityLabel();
@@ -1419,7 +1747,7 @@
 
   updateStaticText();
 
-  fetch("data/manifest/layers.json")
+  fetch(assetUrl("data/manifest/layers.json"))
     .then(function (response) {
       if (!response.ok) throw new Error("Layer manifest load failed");
       return response.json();
@@ -1428,7 +1756,7 @@
       state.manifest = manifest;
       initMap();
       bindUi();
-      return loadLayers();
+      return loadTranslations().then(loadLayers);
     })
     .then(function () {
       rerenderControls();

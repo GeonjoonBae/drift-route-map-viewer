@@ -52,27 +52,13 @@
       "title": "주요 지점",
       "category": "route",
       "default_visible": true,
+      "pane": "keyStopPane",
       "style": {
         "color": "#dc2626",
         "radius": 7
       },
       "path": "data/geojson/route_points.geojson",
       "feature_count": 10
-    },
-    {
-      "source": "Canal_LineLayer.shp",
-      "out": "canal_lines.geojson",
-      "id": "canal_lines",
-      "title": "운하",
-      "category": "context",
-      "default_visible": true,
-      "style": {
-        "color": "#0284c7",
-        "weight": 3,
-        "opacity": 0.78
-      },
-      "path": "data/geojson/canal_lines.geojson",
-      "feature_count": 3
     },
     {
       "source": "AD_JA_PointLayer.csv",
@@ -163,6 +149,76 @@
       "path": "data/geojson/county_points.geojson",
       "feature_count": 1695,
       "skipped_rows": 5
+    },
+    {
+      "source": "v6_1820_prov_pgn_utf.shp",
+      "out": "chgis_1820_province_boundaries.geojson",
+      "id": "chgis_1820_province_boundaries",
+      "title": "1820 성 경계",
+      "category": "boundary",
+      "default_visible": true,
+      "pane": "boundaryPane",
+      "style": {
+        "color": "#334155",
+        "weight": 1.4,
+        "opacity": 0.78,
+        "fillOpacity": 0
+      },
+      "path": "data/geojson/chgis_1820_province_boundaries.geojson",
+      "feature_count": 32
+    },
+    {
+      "source": "v6_time_pref_pgn_gbk_wgs84.shp",
+      "out": "chgis_1796_prefecture_boundaries.geojson",
+      "id": "chgis_1796_prefecture_boundaries",
+      "title": "1796 부급 경계",
+      "category": "boundary",
+      "default_visible": true,
+      "pane": "boundaryPane",
+      "year_filter": 1796,
+      "style": {
+        "color": "#475569",
+        "weight": 1.15,
+        "opacity": 0.68,
+        "fillOpacity": 0,
+        "dashArray": "4 4"
+      },
+      "path": "data/geojson/chgis_1796_prefecture_boundaries.geojson",
+      "feature_count": 272
+    },
+    {
+      "source": "Canal_LineLayer.shp",
+      "out": "canal_lines.geojson",
+      "id": "canal_lines",
+      "title": "운하",
+      "category": "hydrography",
+      "default_visible": true,
+      "pane": "hydrographyPane",
+      "style": {
+        "color": "#0284c7",
+        "weight": 3,
+        "opacity": 0.78
+      },
+      "path": "data/geojson/canal_lines.geojson",
+      "feature_count": 3
+    },
+    {
+      "source": "v6_1820_lks_pgn_utf.shp",
+      "out": "chgis_1820_lakes.geojson",
+      "id": "chgis_1820_lakes",
+      "title": "호수",
+      "category": "hydrography",
+      "default_visible": true,
+      "pane": "hydrographyPane",
+      "style": {
+        "color": "#0284c7",
+        "weight": 1.1,
+        "opacity": 0.84,
+        "fillColor": "#0284c7",
+        "fillOpacity": 0.26
+      },
+      "path": "data/geojson/chgis_1820_lakes.geojson",
+      "feature_count": 353
     }
   ],
   "scenes": [
@@ -170,6 +226,10 @@
       "id": "overview",
       "title": "전체 노정",
       "description": "이방익 표해노정과 주요 지명 레이어를 함께 표시합니다.",
+      "fit": {
+        "layer_id": "route_lines",
+        "token": "route:certain"
+      },
       "visible_layers": [
         "route_lines",
         "route_points",
@@ -178,7 +238,10 @@
         "tg_points",
         "mg_points",
         "wg_points",
-        "canal_lines"
+        "canal_lines",
+        "chgis_1820_province_boundaries",
+        "chgis_1796_prefecture_boundaries",
+        "chgis_1820_lakes"
       ]
     },
     {
@@ -221,7 +284,9 @@
         "route_lines",
         "route_points",
         "ad_ja_points",
-        "county_points"
+        "county_points",
+        "chgis_1820_province_boundaries",
+        "chgis_1796_prefecture_boundaries"
       ]
     }
   ],
