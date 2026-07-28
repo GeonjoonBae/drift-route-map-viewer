@@ -22,7 +22,7 @@
     ilseongnok: "『일성록』"
   };
 
-  var APP_VERSION = "20260729-1";
+  var APP_VERSION = "20260729-2";
 
   var I18N = {
     ko: {
@@ -631,7 +631,7 @@
       return { className: "marker-county", glyph: "", size: 8, color: "#64748b" };
     }
     if (def.id === "ming_courier_stations") {
-      return { className: "marker-flag marker-ming-station", glyph: "驛", size: 15, color: "#b7791f" };
+      return { className: "marker-small-circle marker-ming-station", glyph: "", size: 8, color: "#b7791f" };
     }
     return { className: "marker-dot-circle", glyph: "", size: 18, color: colorOf(def) };
   }
@@ -697,8 +697,6 @@
     var dashArray = null;
     var memo = [props.TYPE_MEMO, props.TRANS_MEMO].join(" ");
     if (def.id === "route_lines") {
-      if (/선박|수로|해로|운하/.test(memo)) color = "#0e7490";
-      if (/도보|육로/.test(memo)) color = "#b91c1c";
       if (/추정|미상/.test(memo)) dashArray = "7 6";
     }
     var style = {
@@ -936,6 +934,17 @@
             if (pane) circleOptions.pane = pane;
             return L.circleMarker(latlng, circleOptions);
           }
+          if (def.id === "ming_courier_stations") {
+            var stationOptions = {
+              radius: def.style && def.style.radius ? def.style.radius : 2.4,
+              color: "rgba(255, 255, 255, 0.72)",
+              weight: 0.6,
+              fillColor: colorOf(def),
+              fillOpacity: 0.76
+            };
+            if (pane) stationOptions.pane = pane;
+            return L.circleMarker(latlng, stationOptions);
+          }
           var markerOptions = { icon: markerIcon(def, feat.properties || {}, tokens) };
           if (pane) markerOptions.pane = pane;
           return L.marker(latlng, markerOptions);
@@ -961,13 +970,6 @@
               window.setTimeout(function () {
                 bindTooltipPopupEvents(layer, feat);
               }, 0);
-            });
-          }
-          if (def.id === "route_lines" && layer.setText) {
-            layer.setText("  ►  ", {
-              repeat: true,
-              offset: 8,
-              attributes: { fill: "#7f1d1d", "font-size": "13px", "font-weight": "700" }
             });
           }
         }
@@ -1158,9 +1160,9 @@
         interactive: false,
         icon: L.divIcon({
           className: "route-arrow-icon",
-          html: "<span class=\"route-arrow\" style=\"transform: rotate(" + (pos.angle - 90) + "deg);\"></span>",
-          iconSize: [12, 12],
-          iconAnchor: [6, 6]
+          html: "<span class=\"route-arrow\" style=\"transform: rotate(" + (pos.angle - 90) + "deg);\">&gt;&gt;</span>",
+          iconSize: [30, 18],
+          iconAnchor: [15, 9]
         })
       })
     ]);

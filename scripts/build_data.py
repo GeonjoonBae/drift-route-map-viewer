@@ -89,7 +89,7 @@ SHP_LAYERS = [
         "title": "노정 선",
         "category": "route",
         "default_visible": True,
-        "style": {"color": "#b91c1c", "weight": 4, "opacity": 0.92},
+        "style": {"color": "#ef4444", "weight": 4.8, "opacity": 0.95},
     },
     {
         "source": "leespath_proved_PointLayer.shp",
@@ -174,7 +174,7 @@ MING_COURIER_LAYERS = [
         "title": "명대 역참 지점",
         "category": "courier",
         "default_visible": False,
-        "style": {"color": "#b7791f", "radius": 3},
+        "style": {"color": "#b7791f", "radius": 2.4},
     },
     {
         "source": "Ming_Routes_2016.shp",
@@ -184,7 +184,7 @@ MING_COURIER_LAYERS = [
         "title": "명대 역참 노선",
         "category": "courier",
         "default_visible": False,
-        "style": {"color": "#8b5e34", "weight": 1.35, "opacity": 0.68},
+        "style": {"color": "#8b5e34", "weight": 3.8, "opacity": 0.74},
     },
 ]
 

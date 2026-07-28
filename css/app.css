@@ -694,14 +694,18 @@ h2 {
 }
 
 .route-arrow {
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-left: 8px solid #7f1d1d;
-  filter: drop-shadow(0 1px 2px rgba(15, 23, 42, 0.45));
-  opacity: 0.72;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 18px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(127, 29, 29, 0.76), 0 0 2px rgba(127, 29, 29, 0.58);
+  opacity: 0.92;
   transform-origin: 50% 50%;
 }
 
