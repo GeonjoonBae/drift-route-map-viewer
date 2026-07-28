@@ -22,7 +22,7 @@
     ilseongnok: "『일성록』"
   };
 
-  var APP_VERSION = "20260724-5";
+  var APP_VERSION = "20260728-1";
 
   var I18N = {
     ko: {
@@ -158,7 +158,7 @@
   var keyLabels = {
     en: {
       "일련번호": "ID",
-      "한자이름": "Hanja Name",
+      "한자이름": "Chinese Name",
       "한국어이름": "Korean Name",
       "NM_KOR": "Korean Name",
       "NM_CHN": "Chinese Name",
