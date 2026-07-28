@@ -22,7 +22,7 @@
     ilseongnok: "『일성록』"
   };
 
-  var APP_VERSION = "20260728-2";
+  var APP_VERSION = "20260728-3";
 
   var I18N = {
     ko: {
@@ -430,6 +430,15 @@
     return translationFor(props, field, props ? props[field] : "");
   }
 
+  function isKoreanNameField(field) {
+    return field === FIELD.korean || field === "NM_KOR";
+  }
+
+  function popupDisplayValue(props, field) {
+    if (isKoreanNameField(field)) return props ? props[field] : "";
+    return displayValue(props, field);
+  }
+
   function labelText(props, translated) {
     var hanjaKeys = [FIELD.hanja, "NM_CHN", "NAME_FT", "NAME_CH"];
     var fallbackKeys = [FIELD.korean, "NM_KOR", "TYPE_NAME", "NAME_PY"];
@@ -475,7 +484,7 @@
       if (value === null || value === undefined || value === "") return;
       if (String(key).indexOf("_blank_") === 0 || key === "_feature_key") return;
       used.add(key);
-      var display = displayValue(props, key);
+      var display = popupDisplayValue(props, key);
       rows.push(
         "<tr><th>" + escapeHtml(keyLabel(key)) + "</th><td>" + escapeHtml(display) + "</td></tr>"
       );
