@@ -22,7 +22,7 @@
     ilseongnok: "『일성록』"
   };
 
-  var APP_VERSION = "20260728-3";
+  var APP_VERSION = "20260729-1";
 
   var I18N = {
     ko: {
@@ -48,6 +48,7 @@
       context: "비교 자료",
       boundary: "경계",
       hydrography: "수문 도형",
+      courier: "명대 역참",
       all: "전체",
       sublayers: "하위 레이어",
       showSidebar: "패널 열기",
@@ -69,6 +70,8 @@
       mg_points: "산계 지명",
       wg_points: "수계 지명",
       county_points: "시계열 현급 행정 지점",
+      ming_courier_stations: "명대 역참 지점",
+      ming_courier_routes: "명대 역참 노선",
       chgis_1820_province_boundaries: "1820 성 경계",
       chgis_1796_prefecture_boundaries: "1796 부급 경계",
       chgis_1820_lakes: "호수",
@@ -108,6 +111,7 @@
       context: "Context",
       boundary: "Boundary",
       hydrography: "Hydrographic Features",
+      courier: "Ming Courier Network",
       all: "All",
       sublayers: "Sublayers",
       showSidebar: "Show panel",
@@ -129,6 +133,8 @@
       mg_points: "Mountain System",
       wg_points: "Water System",
       county_points: "Time-series County Seats",
+      ming_courier_stations: "Ming Courier Stations",
+      ming_courier_routes: "Ming Courier Routes",
       chgis_1820_province_boundaries: "1820 Province Boundaries",
       chgis_1796_prefecture_boundaries: "1796 Prefecture Boundaries",
       chgis_1820_lakes: "Lakes",
@@ -185,6 +191,25 @@
       "출처(1차사료)": "Primary Source",
       "NAME_FT": "Traditional Name",
       "NAME_CH": "Chinese Name",
+      "YZ_ID": "Station ID",
+      "YZ_LABEL": "Station Label",
+      "YZNM_PY": "Romanized Name",
+      "YZNM_CH": "Chinese Name (Simplified)",
+      "YZNM_FT": "Chinese Name (Traditional)",
+      "CHGIS_ID": "CHGIS ID",
+      "10CNTY_CH": "2010 County",
+      "10CNTY_EN": "2010 County (English)",
+      "10PREF_CH": "2010 Prefecture",
+      "10PREF_EN": "2010 Prefecture (English)",
+      "10PROV_CH": "2010 Province",
+      "10PROV_EN": "2010 Province (English)",
+      "GBCODE": "GB Code",
+      "YZ_LAT": "Station Longitude",
+      "YZ_LONG": "Station Latitude",
+      "MAJ_MINOR": "Route Class",
+      "SOURCE": "Source",
+      "SRC": "Source",
+      "STATUS": "Status",
       "PRES_LOC": "Present Location",
       "BEG_YR": "Start Year",
       "END_YR": "End Year",
@@ -370,7 +395,7 @@
   }
 
   function isLineLayer(def) {
-    return def.id.indexOf("lines") !== -1 || def.id === "route_lines";
+    return def.id.indexOf("lines") !== -1 || def.id === "route_lines" || def.id === "ming_courier_routes";
   }
 
   function isBoundaryLayer(def) {
@@ -440,8 +465,8 @@
   }
 
   function labelText(props, translated) {
-    var hanjaKeys = [FIELD.hanja, "NM_CHN", "NAME_FT", "NAME_CH"];
-    var fallbackKeys = [FIELD.korean, "NM_KOR", "TYPE_NAME", "NAME_PY"];
+    var hanjaKeys = [FIELD.hanja, "NM_CHN", "NAME_FT", "NAME_CH", "YZNM_FT", "YZNM_CH"];
+    var fallbackKeys = [FIELD.korean, "NM_KOR", "TYPE_NAME", "NAME_PY", "YZNM_PY", "YZ_LABEL"];
     var i;
     for (i = 0; i < hanjaKeys.length; i += 1) {
       if (props && props[hanjaKeys[i]]) return props[hanjaKeys[i]];
@@ -474,6 +499,9 @@
       FIELD.prefecture, FIELD.county, FIELD.local, FIELD.presentMajor, FIELD.presentLocal,
       FIELD.pyohaerok, FIELD.seo, FIELD.seungjeongwon, FIELD.ilseongnok, FIELD.sourcePaper,
       FIELD.sourcePrimary, "NAME_FT", "NAME_CH", "PRES_LOC", "BEG_YR", "END_YR",
+      "YZ_ID", "YZ_LABEL", "YZNM_PY", "YZNM_CH", "YZNM_FT", "CHGIS_ID",
+      "10CNTY_CH", "10CNTY_EN", "10PREF_CH", "10PREF_EN", "10PROV_CH", "10PROV_EN",
+      "GBCODE", "YZ_LAT", "YZ_LONG", "MAJ_MINOR", "SOURCE", "SRC", "STATUS",
       "_source_file", "_source_crs"
     ];
     var used = new Set();
@@ -601,6 +629,9 @@
     }
     if (def.id === "county_points") {
       return { className: "marker-county", glyph: "", size: 8, color: "#64748b" };
+    }
+    if (def.id === "ming_courier_stations") {
+      return { className: "marker-flag marker-ming-station", glyph: "驛", size: 15, color: "#b7791f" };
     }
     return { className: "marker-dot-circle", glyph: "", size: 18, color: colorOf(def) };
   }

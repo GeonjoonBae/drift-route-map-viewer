@@ -9,6 +9,11 @@ import sys
 from pathlib import Path
 from typing import Any
 
+try:
+    from pyproj import Transformer
+except ImportError:  # pragma: no cover - local rebuild dependency
+    Transformer = None
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "source_data" / "Yi-Bangik-Drift"
@@ -20,7 +25,12 @@ MANIFEST_DIR = ROOT / "data" / "manifest"
 ASSET_IMAGE_DIR = ROOT / "assets" / "images"
 TILE_DIR = ROOT / "assets" / "tiles"
 
+CHGIS_1820_DIR = Path(r"N:\개인\공부자료\표해 노정 연구\dataverse_files(1820 Layers UTF8 Encoding)")
+CHGIS_TIME_PREF_DIR = Path(r"N:\개인\공부자료\표해 노정 연구\dataverse_files(V6 Time Series Prefecture Polygons)")
+MING_COURIER_DIR = Path(r"N:\개인\공부자료\표해 노정 연구\dataverse_files(V6 Ming Dynasty Courier Routes and Stations)")
+
 EARTH_RADIUS_M = 6378137.0
+TRANSFORMERS: dict[str, Any] = {}
 
 
 CSV_LAYERS = [
@@ -88,16 +98,8 @@ SHP_LAYERS = [
         "title": "주요 지점",
         "category": "route",
         "default_visible": True,
+        "pane": "keyStopPane",
         "style": {"color": "#dc2626", "radius": 7},
-    },
-    {
-        "source": "Canal_LineLayer.shp",
-        "out": "canal_lines.geojson",
-        "id": "canal_lines",
-        "title": "운하",
-        "category": "context",
-        "default_visible": True,
-        "style": {"color": "#0284c7", "weight": 3, "opacity": 0.78},
     },
 ]
 
@@ -110,6 +112,81 @@ COUNTY_LAYER = {
     "default_visible": False,
     "style": {"color": "#64748b", "radius": 3},
 }
+
+BOUNDARY_LAYERS = [
+    {
+        "source": "v6_1820_prov_pgn_utf.shp",
+        "source_path": CHGIS_1820_DIR / "v6_1820_prov_pgn_utf" / "v6_1820_prov_pgn_utf.shp",
+        "out": "chgis_1820_province_boundaries.geojson",
+        "id": "chgis_1820_province_boundaries",
+        "title": "1820 성 경계",
+        "category": "boundary",
+        "default_visible": True,
+        "pane": "boundaryPane",
+        "style": {"color": "#334155", "weight": 1.4, "opacity": 0.78, "fillOpacity": 0},
+    },
+    {
+        "source": "v6_time_pref_pgn_gbk_wgs84.shp",
+        "source_path": CHGIS_TIME_PREF_DIR
+        / "v6_time_pref_pgn_gbk_wgs84"
+        / "v6_time_pref_pgn_gbk_wgs84.shp",
+        "out": "chgis_1796_prefecture_boundaries.geojson",
+        "id": "chgis_1796_prefecture_boundaries",
+        "title": "1796 부급 경계",
+        "category": "boundary",
+        "default_visible": True,
+        "pane": "boundaryPane",
+        "year_filter": 1796,
+        "style": {"color": "#475569", "weight": 1.15, "opacity": 0.68, "fillOpacity": 0, "dashArray": "4 4"},
+    },
+]
+
+HYDROGRAPHIC_LAYERS = [
+    {
+        "source": "Canal_LineLayer.shp",
+        "out": "canal_lines.geojson",
+        "id": "canal_lines",
+        "title": "운하",
+        "category": "hydrography",
+        "default_visible": True,
+        "pane": "hydrographyPane",
+        "style": {"color": "#0284c7", "weight": 3, "opacity": 0.78},
+    },
+    {
+        "source": "v6_1820_lks_pgn_utf.shp",
+        "source_path": CHGIS_1820_DIR / "v6_1820_lks_pgn_utf" / "v6_1820_lks_pgn_utf.shp",
+        "out": "chgis_1820_lakes.geojson",
+        "id": "chgis_1820_lakes",
+        "title": "호수",
+        "category": "hydrography",
+        "default_visible": True,
+        "pane": "hydrographyPane",
+        "style": {"color": "#0284c7", "weight": 1.1, "opacity": 0.84, "fillColor": "#0284c7", "fillOpacity": 0.26},
+    },
+]
+
+MING_COURIER_LAYERS = [
+    {
+        "source": "Ming_Stations_2016.shp",
+        "source_path": MING_COURIER_DIR / "Ming_Stations_2016" / "Ming_Stations_2016.shp",
+        "out": "ming_courier_stations.geojson",
+        "id": "ming_courier_stations",
+        "title": "명대 역참 지점",
+        "category": "courier",
+        "default_visible": False,
+        "style": {"color": "#b7791f", "radius": 3},
+    },
+    {
+        "source": "Ming_Routes_2016.shp",
+        "source_path": MING_COURIER_DIR / "Ming_Routes_2016" / "Ming_Routes_2016.shp",
+        "out": "ming_courier_routes.geojson",
+        "id": "ming_courier_routes",
+        "title": "명대 역참 노선",
+        "category": "courier",
+        "default_visible": False,
+        "style": {"color": "#8b5e34", "weight": 1.35, "opacity": 0.68},
+    },
+]
 
 
 def ensure_csv_field_limit() -> None:
@@ -175,9 +252,12 @@ def csv_to_geojson(layer: dict[str, Any]) -> dict[str, Any]:
             skipped += 1
             continue
         props = dict(row)
+        chinese_name = props.pop("한자이름", None)
         props["_layer_id"] = layer["id"]
         props["_layer_title"] = layer["title"]
         props["_source_file"] = layer["source"]
+        if chinese_name is not None:
+            props["Chinese Name"] = chinese_name
         features.append(
             {
                 "type": "Feature",
@@ -264,18 +344,48 @@ def detect_crs(path: Path) -> str:
     return "EPSG:4326"
 
 
+def transformer_for(crs: str) -> Any:
+    if crs not in TRANSFORMERS:
+        if Transformer is None:
+            raise RuntimeError("pyproj is required to reproject CHGIS boundary layers from EPSG:2333 to EPSG:4326")
+        TRANSFORMERS[crs] = Transformer.from_crs(crs, "EPSG:4326", always_xy=True)
+    return TRANSFORMERS[crs]
+
+
 def transform_xy(x: float, y: float, crs: str) -> list[float]:
     if crs == "EPSG:3857":
         lon = (x / EARTH_RADIUS_M) * 180.0 / math.pi
         lat = (2.0 * math.atan(math.exp(y / EARTH_RADIUS_M)) - math.pi / 2.0) * 180.0 / math.pi
         return [lon, lat]
+    if crs == "EPSG:2333":
+        lon, lat = transformer_for(crs).transform(x, y)
+        return [lon, lat]
     return [x, y]
+
+
+def feature_matches_year(props: dict[str, Any], year: int | None) -> bool:
+    if year is None:
+        return True
+    begin = parse_float(props.get("BEG_YR"))
+    end = parse_float(props.get("END_YR"))
+    if begin is not None and begin > year:
+        return False
+    if end is not None and end < year:
+        return False
+    return True
+
+
+def shp_source_path(layer: dict[str, Any]) -> Path:
+    if layer.get("source_path"):
+        return Path(layer["source_path"])
+    return SHP_DIR / layer["source"]
 
 
 def read_shp_features(path: Path, layer: dict[str, Any]) -> list[dict[str, Any]]:
     encoding = read_cpg(path)
     records = read_dbf(path.with_suffix(".dbf"), encoding)
     crs = detect_crs(path)
+    year_filter = layer.get("year_filter")
 
     data = path.read_bytes()
     features: list[dict[str, Any]] = []
@@ -294,16 +404,20 @@ def read_shp_features(path: Path, layer: dict[str, Any]) -> list[dict[str, Any]]
         props = records[record_index] if record_index < len(records) else {}
         record_index += 1
         props = clean_properties(dict(props))
+        if not feature_matches_year(props, year_filter):
+            continue
         props["_layer_id"] = layer["id"]
         props["_layer_title"] = layer["title"]
         props["_source_file"] = layer["source"]
         props["_source_crs"] = crs
+        if year_filter is not None:
+            props["_filter_year"] = year_filter
 
         geometry: dict[str, Any] | None = None
         if shape_type == 1 and len(content) >= 20:
             x, y = struct.unpack("<2d", content[4:20])
             geometry = {"type": "Point", "coordinates": transform_xy(x, y, crs)}
-        elif shape_type == 3 and len(content) >= 44:
+        elif shape_type in {3, 5} and len(content) >= 44:
             num_parts = int.from_bytes(content[36:40], "little", signed=True)
             num_points = int.from_bytes(content[40:44], "little", signed=True)
             parts_start = 44
@@ -317,14 +431,28 @@ def read_shp_features(path: Path, layer: dict[str, Any]) -> list[dict[str, Any]]
                 start = points_start + i * 16
                 x, y = struct.unpack("<2d", content[start : start + 16])
                 points.append(transform_xy(x, y, crs))
-            if num_parts <= 1:
+            if shape_type == 3 and num_parts <= 1:
                 geometry = {"type": "LineString", "coordinates": points}
-            else:
+            elif shape_type == 3:
                 lines = []
                 for i, start in enumerate(parts):
                     end = parts[i + 1] if i + 1 < len(parts) else len(points)
                     lines.append(points[start:end])
                 geometry = {"type": "MultiLineString", "coordinates": lines}
+            else:
+                polygons = []
+                for i, start in enumerate(parts):
+                    end = parts[i + 1] if i + 1 < len(parts) else len(points)
+                    ring = points[start:end]
+                    if len(ring) < 4:
+                        continue
+                    if ring[0] != ring[-1]:
+                        ring.append(ring[0])
+                    polygons.append([ring])
+                if len(polygons) == 1:
+                    geometry = {"type": "Polygon", "coordinates": polygons[0]}
+                elif polygons:
+                    geometry = {"type": "MultiPolygon", "coordinates": polygons}
 
         if geometry:
             features.append({"type": "Feature", "geometry": geometry, "properties": props})
@@ -333,11 +461,23 @@ def read_shp_features(path: Path, layer: dict[str, Any]) -> list[dict[str, Any]]
 
 
 def shp_to_geojson(layer: dict[str, Any]) -> dict[str, Any]:
-    source_path = SHP_DIR / layer["source"]
+    source_path = shp_source_path(layer)
     features = read_shp_features(source_path, layer)
     out_path = GEOJSON_DIR / layer["out"]
     write_geojson(out_path, features)
-    return {**layer, "path": f"data/geojson/{layer['out']}", "feature_count": len(features)}
+    return {
+        **{key: value for key, value in layer.items() if key != "source_path"},
+        "path": f"data/geojson/{layer['out']}",
+        "feature_count": len(features),
+    }
+
+
+def boundary_to_geojson(layer: dict[str, Any]) -> dict[str, Any] | None:
+    source_path = shp_source_path(layer)
+    if not source_path.exists():
+        print(f"Skipping missing boundary source: {source_path}")
+        return None
+    return shp_to_geojson(layer)
 
 
 def county_dbf_to_geojson(layer: dict[str, Any]) -> dict[str, Any]:
@@ -430,6 +570,7 @@ def write_manifest(layers: list[dict[str, Any]], images: list[dict[str, Any]], b
                 "id": "overview",
                 "title": "전체 노정",
                 "description": "이방익 표해노정과 주요 지명 레이어를 함께 표시합니다.",
+                "fit": {"layer_id": "route_lines", "token": "route:certain"},
                 "visible_layers": [
                     "route_lines",
                     "route_points",
@@ -439,6 +580,9 @@ def write_manifest(layers: list[dict[str, Any]], images: list[dict[str, Any]], b
                     "mg_points",
                     "wg_points",
                     "canal_lines",
+                    "chgis_1820_province_boundaries",
+                    "chgis_1796_prefecture_boundaries",
+                    "chgis_1820_lakes",
                 ],
             },
             {
@@ -463,7 +607,14 @@ def write_manifest(layers: list[dict[str, Any]], images: list[dict[str, Any]], b
                 "id": "admin_context",
                 "title": "행정 지점 검토",
                 "description": "시계열 현급 행정 지점을 포함해 지명 위치를 검토합니다.",
-                "visible_layers": ["route_lines", "route_points", "ad_ja_points", "county_points"],
+                "visible_layers": [
+                    "route_lines",
+                    "route_points",
+                    "ad_ja_points",
+                    "county_points",
+                    "chgis_1820_province_boundaries",
+                    "chgis_1796_prefecture_boundaries",
+                ],
             },
         ],
         "images": images,
@@ -484,6 +635,16 @@ def main() -> None:
     for layer in CSV_LAYERS:
         layers.append(csv_to_geojson(layer))
     layers.append(county_dbf_to_geojson(COUNTY_LAYER))
+    for layer in MING_COURIER_LAYERS:
+        layers.append(shp_to_geojson(layer))
+    for layer in BOUNDARY_LAYERS:
+        boundary_layer = boundary_to_geojson(layer)
+        if boundary_layer:
+            layers.append(boundary_layer)
+    for layer in HYDROGRAPHIC_LAYERS:
+        hydro_layer = boundary_to_geojson(layer) if layer.get("source_path") else shp_to_geojson(layer)
+        if hydro_layer:
+            layers.append(hydro_layer)
     images = copy_images()
     basemaps = prepare_basemaps()
     write_manifest(layers, images, basemaps)

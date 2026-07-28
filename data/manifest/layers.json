@@ -151,6 +151,35 @@
       "skipped_rows": 5
     },
     {
+      "source": "Ming_Stations_2016.shp",
+      "out": "ming_courier_stations.geojson",
+      "id": "ming_courier_stations",
+      "title": "명대 역참 지점",
+      "category": "courier",
+      "default_visible": false,
+      "style": {
+        "color": "#b7791f",
+        "radius": 3
+      },
+      "path": "data/geojson/ming_courier_stations.geojson",
+      "feature_count": 1000
+    },
+    {
+      "source": "Ming_Routes_2016.shp",
+      "out": "ming_courier_routes.geojson",
+      "id": "ming_courier_routes",
+      "title": "명대 역참 노선",
+      "category": "courier",
+      "default_visible": false,
+      "style": {
+        "color": "#8b5e34",
+        "weight": 1.35,
+        "opacity": 0.68
+      },
+      "path": "data/geojson/ming_courier_routes.geojson",
+      "feature_count": 1042
+    },
+    {
       "source": "v6_1820_prov_pgn_utf.shp",
       "out": "chgis_1820_province_boundaries.geojson",
       "id": "chgis_1820_province_boundaries",
