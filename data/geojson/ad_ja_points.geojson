@@ -12,7 +12,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_001",
-        "한자이름": "東衛",
         "한국어이름": "동위",
         "대분류": "특수행정 지명",
         "소분류": "기타 행정/군사시설",
@@ -34,7 +33,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "東衛"
       }
     },
     {
@@ -48,7 +48,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_002",
-        "한자이름": "媽宮",
         "한국어이름": "마궁",
         "대분류": "특수행정 지명",
         "소분류": "기타 행정/군사시설",
@@ -70,7 +69,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "媽宮"
       }
     },
     {
@@ -84,7 +84,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_003",
-        "한자이름": "協鎭衙門",
         "한국어이름": "협진아문",
         "대분류": "특수행정 지명",
         "소분류": "행정Lv3/군사시설",
@@ -106,7 +105,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "協鎭衙門"
       }
     },
     {
@@ -120,7 +120,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_004",
-        "한자이름": "臺灣府",
         "한국어이름": "대만부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -142,7 +141,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "臺灣府"
       }
     },
     {
@@ -156,7 +156,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_005",
-        "한자이름": "同安縣",
         "한국어이름": "동안현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -178,7 +177,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "同安縣"
       }
     },
     {
@@ -192,7 +192,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_006",
-        "한자이름": "馬巷廳",
         "한국어이름": "마항청",
         "대분류": "특수행정 지명",
         "소분류": "기타 행정시설",
@@ -214,7 +213,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "馬巷廳"
       }
     },
     {
@@ -228,7 +228,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_007",
-        "한자이름": "泉州府",
         "한국어이름": "천주부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -250,7 +249,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "泉州府"
       }
     },
     {
@@ -264,7 +264,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_008",
-        "한자이름": "惠安縣",
         "한국어이름": "혜안현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -286,7 +285,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "惠安縣"
       }
     },
     {
@@ -300,7 +300,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_009",
-        "한자이름": "興化府",
         "한국어이름": "흥화부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -322,7 +321,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "興化府"
       }
     },
     {
@@ -336,7 +336,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_010",
-        "한자이름": "福淸縣",
         "한국어이름": "복청현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -358,7 +357,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "福淸縣"
       }
     },
     {
@@ -372,7 +372,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_012",
-        "한자이름": "福建省",
         "한국어이름": "복건성",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv1",
@@ -394,7 +393,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "福建省"
       }
     },
     {
@@ -408,7 +408,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_013",
-        "한자이름": "閩淸縣",
         "한국어이름": "민청현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -430,7 +429,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "閩淸縣"
       }
     },
     {
@@ -444,7 +444,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_014",
-        "한자이름": "水口鎭",
         "한국어이름": "수구진",
         "대분류": "특수행정 지명",
         "소분류": "군사시설",
@@ -466,7 +465,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "水口鎭"
       }
     },
     {
@@ -480,7 +480,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_015",
-        "한자이름": "南平縣",
         "한국어이름": "남평현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -502,7 +501,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "南平縣"
       }
     },
     {
@@ -516,7 +516,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_016",
-        "한자이름": "建寧府",
         "한국어이름": "건녕부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -538,7 +537,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "建寧府"
       }
     },
     {
@@ -552,7 +552,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_017",
-        "한자이름": "建陽縣",
         "한국어이름": "건양현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -574,7 +573,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "建陽縣"
       }
     },
     {
@@ -588,7 +588,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_018",
-        "한자이름": "浦城縣",
         "한국어이름": "포성현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -610,7 +609,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "浦城縣"
       }
     },
     {
@@ -624,7 +624,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_019",
-        "한자이름": "江山縣",
         "한국어이름": "강산현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -646,7 +645,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "江山縣"
       }
     },
     {
@@ -660,7 +660,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_020",
-        "한자이름": "衢州府",
         "한국어이름": "구주부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -682,7 +681,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "衢州府"
       }
     },
     {
@@ -696,7 +696,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_021",
-        "한자이름": "龍游縣",
         "한국어이름": "용유현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -718,7 +717,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "龍游縣"
       }
     },
     {
@@ -732,7 +732,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_022",
-        "한자이름": "建德縣",
         "한국어이름": "건덕현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -754,7 +753,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "建德縣"
       }
     },
     {
@@ -768,7 +768,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_023",
-        "한자이름": "嚴州府",
         "한국어이름": "엄주부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -790,7 +789,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "嚴州府"
       }
     },
     {
@@ -804,7 +804,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_025",
-        "한자이름": "桐盧縣",
         "한국어이름": "동로현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -826,7 +825,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "桐盧縣"
       }
     },
     {
@@ -840,7 +840,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_026",
-        "한자이름": "富陽縣",
         "한국어이름": "부양현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -862,7 +861,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "富陽縣"
       }
     },
     {
@@ -876,7 +876,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_027",
-        "한자이름": "杭州府",
         "한국어이름": "항주부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -898,7 +897,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "杭州府"
       }
     },
     {
@@ -912,7 +912,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_028",
-        "한자이름": "石門縣",
         "한국어이름": "석문현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -934,7 +933,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "石門縣"
       }
     },
     {
@@ -948,7 +948,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_029",
-        "한자이름": "嘉興府",
         "한국어이름": "가흥부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -970,7 +969,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "嘉興府"
       }
     },
     {
@@ -984,7 +984,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_030",
-        "한자이름": "無錫縣",
         "한국어이름": "무석현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1006,7 +1005,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "無錫縣"
       }
     },
     {
@@ -1020,7 +1020,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_031",
-        "한자이름": "常州府",
         "한국어이름": "상주부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -1042,7 +1041,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "常州府"
       }
     },
     {
@@ -1056,7 +1056,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_032",
-        "한자이름": "丹陽縣",
         "한국어이름": "단양현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1078,7 +1077,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "丹陽縣"
       }
     },
     {
@@ -1092,7 +1092,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_033",
-        "한자이름": "鎭江府",
         "한국어이름": "진강부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -1114,7 +1113,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "鎭江府"
       }
     },
     {
@@ -1128,7 +1128,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_034",
-        "한자이름": "蕪湖縣",
         "한국어이름": "무호현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1150,7 +1149,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "蕪湖縣"
       }
     },
     {
@@ -1164,7 +1164,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_035",
-        "한자이름": "銅陵縣",
         "한국어이름": "동릉현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1186,7 +1185,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "銅陵縣"
       }
     },
     {
@@ -1200,7 +1200,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_036",
-        "한자이름": "安慶府",
         "한국어이름": "안경부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -1222,7 +1221,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "安慶府"
       }
     },
     {
@@ -1236,7 +1236,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_037",
-        "한자이름": "東流縣",
         "한국어이름": "동류현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1258,7 +1257,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "東流縣"
       }
     },
     {
@@ -1272,7 +1272,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_038",
-        "한자이름": "彭澤縣",
         "한국어이름": "팽택현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1294,7 +1293,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "彭澤縣"
       }
     },
     {
@@ -1308,7 +1308,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_039",
-        "한자이름": "九江府",
         "한국어이름": "구강부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -1330,7 +1329,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "九江府"
       }
     },
     {
@@ -1344,7 +1344,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_040",
-        "한자이름": "黃州府",
         "한국어이름": "황주부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -1366,7 +1365,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "黃州府"
       }
     },
     {
@@ -1380,7 +1380,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_041",
-        "한자이름": "武昌府",
         "한국어이름": "무창부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -1402,7 +1401,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "武昌府"
       }
     },
     {
@@ -1416,7 +1416,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_042",
-        "한자이름": "嘉魚縣",
         "한국어이름": "가어현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1438,7 +1437,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "嘉魚縣"
       }
     },
     {
@@ -1452,7 +1452,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_043",
-        "한자이름": "岳州府",
         "한국어이름": "악주부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -1474,7 +1473,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "岳州府"
       }
     },
     {
@@ -1488,7 +1488,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_044",
-        "한자이름": "湖口縣",
         "한국어이름": "호구현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1510,7 +1509,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "湖口縣"
       }
     },
     {
@@ -1524,7 +1524,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_045",
-        "한자이름": "池州府",
         "한국어이름": "지주부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -1546,7 +1545,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "池州府"
       }
     },
     {
@@ -1560,7 +1560,6 @@
       },
       "properties": {
         "일련번호": "AD_JA_046",
-        "한자이름": "蘇州府",
         "한국어이름": "소주부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -1582,7 +1581,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "蘇州府"
       }
     },
     {
@@ -1596,7 +1596,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_048",
-        "한자이름": "江都縣",
         "한국어이름": "강도현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1618,7 +1617,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "江都縣"
       }
     },
     {
@@ -1632,7 +1632,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_050",
-        "한자이름": "高郵州",
         "한국어이름": "고우주",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1654,7 +1653,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "高郵州"
       }
     },
     {
@@ -1668,7 +1668,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_051",
-        "한자이름": "寶應縣",
         "한국어이름": "보응현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1690,7 +1689,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "寶應縣"
       }
     },
     {
@@ -1704,7 +1704,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_052",
-        "한자이름": "淮安府",
         "한국어이름": "회안부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -1726,7 +1725,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "淮安府"
       }
     },
     {
@@ -1740,7 +1740,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_053",
-        "한자이름": "山陽縣",
         "한국어이름": "산양현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1762,7 +1761,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "山陽縣"
       }
     },
     {
@@ -1776,7 +1776,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_055",
-        "한자이름": "王家營鎭",
         "한국어이름": "왕가영진",
         "대분류": "특수행정 지명",
         "소분류": "군사시설",
@@ -1798,7 +1797,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "王家營鎭"
       }
     },
     {
@@ -1812,7 +1812,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_056",
-        "한자이름": "衆興集",
         "한국어이름": "중흥집",
         "대분류": "특수행정 지명",
         "소분류": "기타 행정/군사시설",
@@ -1834,7 +1833,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "衆興集"
       }
     },
     {
@@ -1848,7 +1848,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_058",
-        "한자이름": "郯城縣",
         "한국어이름": "담성현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1870,7 +1869,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "郯城縣"
       }
     },
     {
@@ -1884,7 +1884,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_059",
-        "한자이름": "蘭山縣",
         "한국어이름": "난산현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1906,7 +1905,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "蘭山縣"
       }
     },
     {
@@ -1920,7 +1920,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_060",
-        "한자이름": "蒙陰縣",
         "한국어이름": "몽음현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1942,7 +1941,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "蒙陰縣"
       }
     },
     {
@@ -1956,7 +1956,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_061",
-        "한자이름": "新太縣",
         "한국어이름": "신태현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -1978,7 +1977,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "新太縣"
       }
     },
     {
@@ -1992,7 +1992,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_062",
-        "한자이름": "泰安府",
         "한국어이름": "태안부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -2014,7 +2013,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "泰安府"
       }
     },
     {
@@ -2028,7 +2028,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_063",
-        "한자이름": "濟南府",
         "한국어이름": "제남부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -2050,7 +2049,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "濟南府"
       }
     },
     {
@@ -2064,7 +2064,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_064",
-        "한자이름": "濟河縣",
         "한국어이름": "제하현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2086,7 +2085,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "濟河縣"
       }
     },
     {
@@ -2100,7 +2100,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_065",
-        "한자이름": "禹城縣",
         "한국어이름": "우성현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2122,7 +2121,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "禹城縣"
       }
     },
     {
@@ -2136,7 +2136,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_066",
-        "한자이름": "德州",
         "한국어이름": "덕주",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2158,7 +2157,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "德州"
       }
     },
     {
@@ -2172,7 +2172,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_067",
-        "한자이름": "景州",
         "한국어이름": "경주",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2194,7 +2193,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "景州"
       }
     },
     {
@@ -2208,7 +2208,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_068",
-        "한자이름": "阜城縣",
         "한국어이름": "부성현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2230,7 +2229,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "阜城縣"
       }
     },
     {
@@ -2244,7 +2244,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_069",
-        "한자이름": "交河縣",
         "한국어이름": "교하현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2266,7 +2265,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "交河縣"
       }
     },
     {
@@ -2280,7 +2280,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_070",
-        "한자이름": "獻縣",
         "한국어이름": "헌현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2302,7 +2301,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "獻縣"
       }
     },
     {
@@ -2316,7 +2316,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_071",
-        "한자이름": "河間府",
         "한국어이름": "하간부",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv2",
@@ -2338,7 +2337,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "河間府"
       }
     },
     {
@@ -2352,7 +2352,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_072",
-        "한자이름": "任丘縣",
         "한국어이름": "임구현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2374,7 +2373,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "任丘縣"
       }
     },
     {
@@ -2388,7 +2388,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_073",
-        "한자이름": "雄縣",
         "한국어이름": "웅현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2410,7 +2409,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "雄縣"
       }
     },
     {
@@ -2424,7 +2424,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_074",
-        "한자이름": "新城縣",
         "한국어이름": "신성현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2446,7 +2445,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "新城縣"
       }
     },
     {
@@ -2460,7 +2460,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_075",
-        "한자이름": "涿州",
         "한국어이름": "탁주",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2482,7 +2481,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "涿州"
       }
     },
     {
@@ -2496,7 +2496,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_076",
-        "한자이름": "良鄕縣",
         "한국어이름": "양향현",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv3",
@@ -2518,7 +2517,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "良鄕縣"
       }
     },
     {
@@ -2532,7 +2532,6 @@
       },
       "properties": {
         "일련번호": "AD_JD_077",
-        "한자이름": "北京",
         "한국어이름": "북경",
         "대분류": "행정 지명(치소)",
         "소분류": "행정Lv0",
@@ -2554,7 +2553,8 @@
         "_blank_1": null,
         "_layer_id": "ad_ja_points",
         "_layer_title": "행정 지명",
-        "_source_file": "AD_JA_PointLayer.csv"
+        "_source_file": "AD_JA_PointLayer.csv",
+        "Chinese Name": "北京"
       }
     }
   ]

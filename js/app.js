@@ -3,7 +3,7 @@
 
   var FIELD = {
     id: "일련번호",
-    hanja: "한자이름",
+    hanja: "Chinese Name",
     korean: "한국어이름",
     major: "대분류",
     minor: "소분류",
@@ -22,7 +22,7 @@
     ilseongnok: "『일성록』"
   };
 
-  var APP_VERSION = "20260728-1";
+  var APP_VERSION = "20260728-2";
 
   var I18N = {
     ko: {
@@ -159,6 +159,7 @@
     en: {
       "일련번호": "ID",
       "한자이름": "Chinese Name",
+      "Chinese Name": "Chinese Name",
       "한국어이름": "Korean Name",
       "NM_KOR": "Korean Name",
       "NM_CHN": "Chinese Name",

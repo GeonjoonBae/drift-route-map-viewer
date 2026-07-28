@@ -12,7 +12,6 @@
       },
       "properties": {
         "일련번호": "TS_001",
-        "한자이름": "洛陽橋",
         "한국어이름": "낙양교",
         "대분류": "교통 지명",
         "소분류": "교량",
@@ -34,7 +33,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "洛陽橋"
       }
     },
     {
@@ -48,7 +48,6 @@
       },
       "properties": {
         "일련번호": "TS_002",
-        "한자이름": "黃津橋",
         "한국어이름": "황진교",
         "대분류": "교통 지명",
         "소분류": "교량",
@@ -70,7 +69,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "黃津橋"
       }
     },
     {
@@ -84,7 +84,6 @@
       },
       "properties": {
         "일련번호": "TS_003",
-        "한자이름": "黃田驛",
         "한국어이름": "황전역",
         "대분류": "교통 지명",
         "소분류": "역참",
@@ -106,7 +105,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "黃田驛"
       }
     },
     {
@@ -120,7 +120,6 @@
       },
       "properties": {
         "일련번호": "TS_006",
-        "한자이름": "大王館",
         "한국어이름": "대왕관",
         "대분류": "교통 지명",
         "소분류": "역참",
@@ -142,7 +141,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "大王館"
       }
     },
     {
@@ -156,7 +156,6 @@
       },
       "properties": {
         "일련번호": "TS_007",
-        "한자이름": "太平驛",
         "한국어이름": "태평역",
         "대분류": "교통 지명",
         "소분류": "역참",
@@ -178,7 +177,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "太平驛"
       }
     },
     {
@@ -192,7 +192,6 @@
       },
       "properties": {
         "일련번호": "TS_008",
-        "한자이름": "葉坊巡司",
         "한국어이름": "엽방순사",
         "대분류": "교통 지명",
         "소분류": "역참",
@@ -214,7 +213,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "葉坊巡司"
       }
     },
     {
@@ -228,7 +228,6 @@
       },
       "properties": {
         "일련번호": "TS_009",
-        "한자이름": "人和驛",
         "한국어이름": "인화역",
         "대분류": "교통 지명",
         "소분류": "역참",
@@ -250,7 +249,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "人和驛"
       }
     },
     {
@@ -264,7 +264,6 @@
       },
       "properties": {
         "일련번호": "TS_011",
-        "한자이름": "峽口站",
         "한국어이름": "협구참",
         "대분류": "교통 지명",
         "소분류": "역참",
@@ -286,7 +285,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "峽口站"
       }
     },
     {
@@ -300,7 +300,6 @@
       },
       "properties": {
         "일련번호": "TS_012",
-        "한자이름": "北新關",
         "한국어이름": "북신관",
         "대분류": "교통 지명",
         "소분류": "관문",
@@ -322,7 +321,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "北新關"
       }
     },
     {
@@ -336,7 +336,6 @@
       },
       "properties": {
         "일련번호": "TS_013",
-        "한자이름": "池口馹",
         "한국어이름": "지구일",
         "대분류": "교통 지명",
         "소분류": "역참",
@@ -358,7 +357,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "池口馹"
       }
     },
     {
@@ -372,7 +372,6 @@
       },
       "properties": {
         "일련번호": "TS_014",
-        "한자이름": "李家庄驛",
         "한국어이름": "이가장역",
         "대분류": "교통 지명",
         "소분류": "역참",
@@ -394,7 +393,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "李家庄驛"
       }
     },
     {
@@ -408,7 +408,6 @@
       },
       "properties": {
         "일련번호": "TS_016",
-        "한자이름": "徐公店驛",
         "한국어이름": "서공점역",
         "대분류": "교통 지명",
         "소분류": "역참",
@@ -430,7 +429,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "徐公店驛"
       }
     },
     {
@@ -444,7 +444,6 @@
       },
       "properties": {
         "일련번호": "TS_018",
-        "한자이름": "羊流店",
         "한국어이름": "양류점",
         "대분류": "교통 지명",
         "소분류": "역참",
@@ -466,7 +465,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "羊流店"
       }
     },
     {
@@ -480,7 +480,6 @@
       },
       "properties": {
         "일련번호": "TS_019",
-        "한자이름": "長城驛",
         "한국어이름": "장성역",
         "대분류": "교통 지명",
         "소분류": "역참",
@@ -502,7 +501,8 @@
         "_blank_1": null,
         "_layer_id": "tg_points",
         "_layer_title": "교통 지명",
-        "_source_file": "TG_PointLayer.csv"
+        "_source_file": "TG_PointLayer.csv",
+        "Chinese Name": "長城驛"
       }
     }
   ]

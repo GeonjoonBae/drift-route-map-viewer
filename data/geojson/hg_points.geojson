@@ -12,7 +12,6 @@
       },
       "properties": {
         "일련번호": "HG_001",
-        "한자이름": "大北門(臺灣府)",
         "한국어이름": "대북문(대만부)",
         "대분류": "인문 지명",
         "소분류": "건축물",
@@ -34,7 +33,8 @@
         "_blank_1": null,
         "_layer_id": "hg_points",
         "_layer_title": "인문 지명",
-        "_source_file": "HG_PointLayer.csv"
+        "_source_file": "HG_PointLayer.csv",
+        "Chinese Name": "大北門(臺灣府)"
       }
     },
     {
@@ -48,7 +48,6 @@
       },
       "properties": {
         "일련번호": "HG_002",
-        "한자이름": "同安縣學",
         "한국어이름": "동안현학",
         "대분류": "인문 지명",
         "소분류": "교육시설",
@@ -70,7 +69,8 @@
         "_blank_1": null,
         "_layer_id": "hg_points",
         "_layer_title": "인문 지명",
-        "_source_file": "HG_PointLayer.csv"
+        "_source_file": "HG_PointLayer.csv",
+        "Chinese Name": "同安縣學"
       }
     },
     {
@@ -84,7 +84,6 @@
       },
       "properties": {
         "일련번호": "HG_003",
-        "한자이름": "法海寺",
         "한국어이름": "법해사",
         "대분류": "인문 지명",
         "소분류": "종교시설(사찰)",
@@ -106,7 +105,8 @@
         "_blank_1": null,
         "_layer_id": "hg_points",
         "_layer_title": "인문 지명",
-        "_source_file": "HG_PointLayer.csv"
+        "_source_file": "HG_PointLayer.csv",
+        "Chinese Name": "法海寺"
       }
     },
     {
@@ -120,7 +120,6 @@
       },
       "properties": {
         "일련번호": "HG_005",
-        "한자이름": "釣臺",
         "한국어이름": "조대",
         "대분류": "인문 지명",
         "소분류": "건축물",
@@ -142,7 +141,8 @@
         "_blank_1": null,
         "_layer_id": "hg_points",
         "_layer_title": "인문 지명",
-        "_source_file": "HG_PointLayer.csv"
+        "_source_file": "HG_PointLayer.csv",
+        "Chinese Name": "釣臺"
       }
     },
     {
@@ -156,7 +156,6 @@
       },
       "properties": {
         "일련번호": "HG_006",
-        "한자이름": "大善寺",
         "한국어이름": "대선사",
         "대분류": "인문 지명",
         "소분류": "종교시설(사찰)",
@@ -178,7 +177,8 @@
         "_blank_1": null,
         "_layer_id": "hg_points",
         "_layer_title": "인문 지명",
-        "_source_file": "HG_PointLayer.csv"
+        "_source_file": "HG_PointLayer.csv",
+        "Chinese Name": "大善寺"
       }
     },
     {
@@ -192,7 +192,6 @@
       },
       "properties": {
         "일련번호": "HG_007",
-        "한자이름": "姑蘇臺",
         "한국어이름": "고소대",
         "대분류": "인문 지명",
         "소분류": "건축물",
@@ -214,7 +213,8 @@
         "_blank_1": null,
         "_layer_id": "hg_points",
         "_layer_title": "인문 지명",
-        "_source_file": "HG_PointLayer.csv"
+        "_source_file": "HG_PointLayer.csv",
+        "Chinese Name": "姑蘇臺"
       }
     },
     {
@@ -228,7 +228,6 @@
       },
       "properties": {
         "일련번호": "HG_008",
-        "한자이름": "虎邱寺",
         "한국어이름": "호구사",
         "대분류": "인문 지명",
         "소분류": "종교시설(사찰)",
@@ -250,7 +249,8 @@
         "_blank_1": null,
         "_layer_id": "hg_points",
         "_layer_title": "인문 지명",
-        "_source_file": "HG_PointLayer.csv"
+        "_source_file": "HG_PointLayer.csv",
+        "Chinese Name": "虎邱寺"
       }
     },
     {
@@ -264,7 +264,6 @@
       },
       "properties": {
         "일련번호": "HG_009",
-        "한자이름": "寒山寺",
         "한국어이름": "한산사",
         "대분류": "인문 지명",
         "소분류": "종교시설(사찰)",
@@ -286,7 +285,8 @@
         "_blank_1": null,
         "_layer_id": "hg_points",
         "_layer_title": "인문 지명",
-        "_source_file": "HG_PointLayer.csv"
+        "_source_file": "HG_PointLayer.csv",
+        "Chinese Name": "寒山寺"
       }
     },
     {
@@ -300,7 +300,6 @@
       },
       "properties": {
         "일련번호": "HG_010",
-        "한자이름": "金山寺",
         "한국어이름": "금산사",
         "대분류": "인문 지명",
         "소분류": "종교시설(사찰)",
@@ -322,7 +321,8 @@
         "_blank_1": "??? 금산사가 각주 86에 있는 양주 금산사인지? 현재 금산사의 지명이 남아있는 곳으로 양주금산사로 불릴법한 곳은 진강시에 있는 금산풍경구로, 청대 부경계도에서 보면 진강부에 속해있기는 하지만 하천을 경계로 양주부와 만나는 곳에 위치. 지도에도 그 위치로 비정",
         "_layer_id": "hg_points",
         "_layer_title": "인문 지명",
-        "_source_file": "HG_PointLayer.csv"
+        "_source_file": "HG_PointLayer.csv",
+        "Chinese Name": "金山寺"
       }
     }
   ]

@@ -12,7 +12,6 @@
       },
       "properties": {
         "일련번호": "MS_001",
-        "한자이름": "西陽嶺",
         "한국어이름": "서양령",
         "대분류": "산계 지명",
         "소분류": "고개",
@@ -34,7 +33,8 @@
         "_blank_1": "현재 잔존 지명",
         "_layer_id": "mg_points",
         "_layer_title": "산계 지명",
-        "_source_file": "MG_PointLayer.csv"
+        "_source_file": "MG_PointLayer.csv",
+        "Chinese Name": "西陽嶺"
       }
     },
     {
@@ -48,7 +48,6 @@
       },
       "properties": {
         "일련번호": "MS_002",
-        "한자이름": "仙霞嶺",
         "한국어이름": "선하령",
         "대분류": "산계 지명",
         "소분류": "고개",
@@ -70,7 +69,8 @@
         "_blank_1": "현재 잔존 지명",
         "_layer_id": "mg_points",
         "_layer_title": "산계 지명",
-        "_source_file": "MG_PointLayer.csv"
+        "_source_file": "MG_PointLayer.csv",
+        "Chinese Name": "仙霞嶺"
       }
     },
     {
@@ -84,7 +84,6 @@
       },
       "properties": {
         "일련번호": "MS_003",
-        "한자이름": "梅嶺",
         "한국어이름": "매령",
         "대분류": "산계 지명",
         "소분류": "고개",
@@ -106,7 +105,8 @@
         "_blank_1": null,
         "_layer_id": "mg_points",
         "_layer_title": "산계 지명",
-        "_source_file": "MG_PointLayer.csv"
+        "_source_file": "MG_PointLayer.csv",
+        "Chinese Name": "梅嶺"
       }
     }
   ]

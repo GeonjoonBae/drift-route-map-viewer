@@ -12,7 +12,6 @@
       },
       "properties": {
         "일련번호": "WS_001",
-        "한자이름": "八里江",
         "한국어이름": "팔리강",
         "대분류": "수계 지명",
         "소분류": "하천",
@@ -34,7 +33,8 @@
         "_blank_1": null,
         "_layer_id": "wg_points",
         "_layer_title": "수계 지명",
-        "_source_file": "WG_PointLayer.csv"
+        "_source_file": "WG_PointLayer.csv",
+        "Chinese Name": "八里江"
       }
     },
     {
@@ -48,7 +48,6 @@
       },
       "properties": {
         "일련번호": "WS_002",
-        "한자이름": "洞庭湖",
         "한국어이름": "동정호",
         "대분류": "수계 지명",
         "소분류": "호수",
@@ -70,7 +69,8 @@
         "_blank_1": null,
         "_layer_id": "wg_points",
         "_layer_title": "수계 지명",
-        "_source_file": "WG_PointLayer.csv"
+        "_source_file": "WG_PointLayer.csv",
+        "Chinese Name": "洞庭湖"
       }
     },
     {
@@ -84,7 +84,6 @@
       },
       "properties": {
         "일련번호": "WS_004",
-        "한자이름": "太湖",
         "한국어이름": "태호",
         "대분류": "수계 지명",
         "소분류": "호수",
@@ -106,7 +105,8 @@
         "_blank_1": null,
         "_layer_id": "wg_points",
         "_layer_title": "수계 지명",
-        "_source_file": "WG_PointLayer.csv"
+        "_source_file": "WG_PointLayer.csv",
+        "Chinese Name": "太湖"
       }
     },
     {
@@ -120,7 +120,6 @@
       },
       "properties": {
         "일련번호": "WS_005",
-        "한자이름": "瓜洲",
         "한국어이름": "과주",
         "대분류": "수계 지명",
         "소분류": "모래톱",
@@ -142,7 +141,8 @@
         "_blank_1": "본문에는 없는거 아닌가?",
         "_layer_id": "wg_points",
         "_layer_title": "수계 지명",
-        "_source_file": "WG_PointLayer.csv"
+        "_source_file": "WG_PointLayer.csv",
+        "Chinese Name": "瓜洲"
       }
     },
     {
@@ -156,7 +156,6 @@
       },
       "properties": {
         "일련번호": "WS_006",
-        "한자이름": "淸江阜",
         "한국어이름": "청강부",
         "대분류": "수계 지명",
         "소분류": "부두",
@@ -178,7 +177,8 @@
         "_blank_1": null,
         "_layer_id": "wg_points",
         "_layer_title": "수계 지명",
-        "_source_file": "WG_PointLayer.csv"
+        "_source_file": "WG_PointLayer.csv",
+        "Chinese Name": "淸江阜"
       }
     }
   ]
